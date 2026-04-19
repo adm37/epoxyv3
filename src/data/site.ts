@@ -24,57 +24,57 @@ export const GEO = {
 export const staticPages = [
   {
     path: '/',
-    title: 'Epoxy Vloeren - Professionele Vloercoatings',
+    title: 'Epoxy Vloeren voor Woning & Bedrijf | Klasse Epoxy',
     description:
-      'Professionele epoxy vloeren voor garage, woonkamer, badkamer en industrie. Metallic en flake effecten beschikbaar.',
+      'Klasse Epoxy is dé specialist voor professionele epoxy vloeren, metallic epoxy en flake epoxy in heel Nederland. Naadloos, duurzaam en volledig op maat.',
   },
   {
     path: '/diensten',
-    title: 'Onze Diensten - Epoxy Vloeren',
+    title: 'Epoxy Vloer Diensten: Coating, Metallic & Flake | Klasse Epoxy',
     description:
-      'Ontdek onze professionele epoxy vloerdiensten: epoxy coating, metallic epoxy en flake epoxy voor woningen, bedrijven en garages.',
+      'Ontdek alle epoxy vloerdiensten van Klasse Epoxy: epoxy coating, metallic epoxy en flake epoxy voor woningen, garages, showrooms en bedrijven in heel Nederland.',
   },
   {
     path: '/werkwijze',
-    title: 'Onze Werkwijze - Epoxy Vloeren',
+    title: 'Werkwijze: Van Offerte tot Oplevering | Klasse Epoxy',
     description:
-      'Ontdek ons professionele proces voor het leggen van epoxy vloeren. Van offerte tot oplevering, stap voor stap uitgelegd.',
+      'Ontdek hoe Klasse Epoxy uw epoxy vloer realiseert. Van gratis intake en offerte tot vakkundige installatie en oplevering. Transparant, stap voor stap.',
   },
   {
     path: '/portfolio',
-    title: 'Portfolio - Epoxy Vloeren',
+    title: 'Portfolio Epoxy Vloeren: Bekijk Onze Projecten | Klasse Epoxy',
     description:
-      'Bekijk ons portfolio van professionele epoxy vloeren. Van metallic effecten tot flake vloeren in garages, woonkamers en bedrijven.',
+      'Bekijk het portfolio van Klasse Epoxy: gerealiseerde epoxy vloeren, metallic designvloeren en flake vloeren in woningen, garages en bedrijven door heel Nederland.',
   },
   {
     path: '/faq',
-    title: 'Veelgestelde Vragen - Epoxy Vloeren',
+    title: 'Veelgestelde Vragen over Epoxy Vloeren | Klasse Epoxy',
     description:
-      'Antwoorden op veelgestelde vragen over epoxy vloeren, prijzen, onderhoud, installatie en het aanvraagproces.',
+      'Antwoorden op de meest gestelde vragen over epoxy vloeren: kosten, installatie, onderhoud, droogtijd en het aanvraagproces bij Klasse Epoxy.',
   },
   {
     path: '/contact',
-    title: 'Contact - Epoxy Vloeren',
+    title: 'Contact: Advies & Offerte Aanvragen | Klasse Epoxy',
     description:
-      'Neem contact op met Klasse Epoxy voor advies, prijzen en offertes voor epoxy vloeren, metallic epoxy en flake epoxy.',
+      'Neem contact op met Klasse Epoxy voor persoonlijk advies of een vrijblijvende offerte. Bereikbaar voor epoxy vloeren, metallic epoxy en flake epoxy in heel Nederland.',
   },
   {
     path: '/offerte',
-    title: 'Offerte Aanvragen - Epoxy Vloeren',
+    title: 'Gratis Offerte Aanvragen voor Epoxy Vloer | Klasse Epoxy',
     description:
-      'Vraag vrijblijvend een offerte aan voor uw epoxy vloer project. Binnen 24 uur reactie en gratis advies van Klasse Epoxy.',
+      'Vraag in 2 minuten een gratis, vrijblijvende offerte aan voor uw epoxy vloer. Klasse Epoxy reageert binnen 24 uur met een scherpe prijsopgave op maat.',
   },
   {
     path: '/privacy',
-    title: 'Privacy Beleid - Epoxy Vloeren',
+    title: 'Privacybeleid | Klasse Epoxy',
     description:
-      'Lees hoe Klasse Epoxy persoonsgegevens verwerkt en beschermt binnen het privacybeleid van de website.',
+      'Lees het privacybeleid van Klasse Epoxy: hoe wij uw persoonsgegevens verzamelen, verwerken en beschermen conform de AVG/GDPR.',
   },
   {
     path: '/algemene-voorwaarden',
-    title: 'Algemene Voorwaarden - Epoxy Vloeren',
+    title: 'Algemene Voorwaarden | Klasse Epoxy',
     description:
-      'Algemene voorwaarden voor offertes, opdrachten en leveringen van Klasse Epoxy.',
+      'Bekijk de algemene voorwaarden van Klasse Epoxy voor offertes, opdrachtneming, uitvoering en betalingen.',
   },
 ] as const;
 
@@ -175,10 +175,25 @@ export function getAllPublicPaths() {
 
 export function getSlugSeo(slug: string) {
   if (serviceSlugs.includes(slug as (typeof serviceSlugs)[number])) {
-    const label = slugToTitle(slug);
+    const serviceMeta: Record<string, { title: string; description: string }> = {
+      'epoxy-coating': {
+        title: 'Epoxy Coating Vloer: Sterk, Naadloos & Duurzaam | Klasse Epoxy',
+        description:
+          'Klasse Epoxy levert professionele epoxy coating voor betonvloeren in woningen, garages en bedrijven. Vloeistofdicht, slijtvast en volledig op maat. Vraag een offerte aan.',
+      },
+      'metallic-epoxy': {
+        title: 'Metallic Epoxy Vloer: Luxe Designvloer met Diepte-Effect | Klasse Epoxy',
+        description:
+          'Klasse Epoxy realiseert exclusieve metallic epoxy vloeren met een uniek diepte-effect en glanzende uitstraling. Ideaal voor woonkamers, showrooms en kantoren.',
+      },
+      'flake-epoxy': {
+        title: 'Flake Epoxy Vloer: Decoratief, Antislip & Slijtvast | Klasse Epoxy',
+        description:
+          'Klasse Epoxy legt flake epoxy vloeren met kleurvlokken voor garages, showrooms en werkplaatsen. Decoratief, antislip en uiterst slijtvast. Vraag nu een offerte aan.',
+      },
+    };
     return {
-      title: `${label} - Epoxy Vloeren`,
-      description: `Ontdek ${label.toLowerCase()} van Klasse Epoxy. Duurzame, naadloze en onderhoudsvriendelijke vloersystemen voor woningen, garages en bedrijven.`,
+      ...serviceMeta[slug],
       schemaType: 'Service',
     };
   }
@@ -186,8 +201,8 @@ export function getSlugSeo(slug: string) {
   if (slug.startsWith('metallic-epoxy-vloer-')) {
     const city = slugToTitle(slug.replace('metallic-epoxy-vloer-', ''));
     return {
-      title: `Metallic Epoxy Vloer ${city} - Epoxy Vloeren`,
-      description: `Klasse Epoxy realiseert metallic epoxy vloeren in ${city}. Luxe designvloeren met diepte, glans en een exclusieve uitstraling voor woningen en bedrijven.`,
+      title: `Metallic Epoxy Vloer ${city} | Klasse Epoxy`,
+      description: `Klasse Epoxy realiseert metallic epoxy vloeren in ${city}. Luxe designvloeren met uniek diepte-effect en exclusieve glans voor woningen en bedrijven. Vraag een offerte aan.`,
       schemaType: 'Service',
     };
   }
@@ -195,7 +210,7 @@ export function getSlugSeo(slug: string) {
   if (slug.startsWith('flake-epoxy-vloer-')) {
     const city = slugToTitle(slug.replace('flake-epoxy-vloer-', ''));
     return {
-      title: `Flake Epoxy Vloer ${city} - Epoxy Vloeren`,
+      title: `Flake Epoxy Vloer ${city} | Klasse Epoxy`,
       description: `Klasse Epoxy realiseert flake epoxy vloeren in ${city}. Decoratieve, slijtvaste en antislip vloeroplossingen voor garages, showrooms en bedrijfsruimtes.`,
       schemaType: 'Service',
     };
@@ -204,7 +219,7 @@ export function getSlugSeo(slug: string) {
   if (slug.startsWith('epoxy-coating-vloer-')) {
     const city = slugToTitle(slug.replace('epoxy-coating-vloer-', ''));
     return {
-      title: `Epoxy Coating Vloer ${city} - Epoxy Vloeren`,
+      title: `Epoxy Coating Vloer ${city} | Klasse Epoxy`,
       description: `Klasse Epoxy levert epoxy coating vloeren in ${city}. Sterke, naadloze en vloeistofdichte coatings voor woningen, garages en industriële toepassingen.`,
       schemaType: 'Service',
     };
@@ -213,7 +228,7 @@ export function getSlugSeo(slug: string) {
   if (slug.startsWith('epoxy-vloer-')) {
     const city = slugToTitle(slug.replace('epoxy-vloer-', ''));
     return {
-      title: `Epoxy Vloer ${city} - Epoxy Vloeren`,
+      title: `Epoxy Vloer ${city} | Klasse Epoxy`,
       description: `Klasse Epoxy realiseert hoogwaardige epoxy vloeren in ${city}. Naadloze, duurzame en onderhoudsvriendelijke vloeren voor woningen, werkplaatsen en commerciële ruimtes.`,
       schemaType: 'Service',
     };
@@ -221,8 +236,8 @@ export function getSlugSeo(slug: string) {
 
   const keywordLabel = slugToTitle(slug);
   return {
-    title: `${keywordLabel} - Epoxy Vloeren`,
-    description: `Lees alles over ${keywordLabel.toLowerCase()} van Klasse Epoxy. Praktische uitleg, toepassingen, voordelen en advies voor epoxy vloeren en coatings.`,
+    title: `${keywordLabel} | Klasse Epoxy`,
+    description: `Lees alles over ${keywordLabel.toLowerCase()} bij Klasse Epoxy. Praktische uitleg, toepassingen, voordelen en deskundig advies voor epoxy vloeren en coatings.`,
     schemaType: 'WebPage',
   };
 }
