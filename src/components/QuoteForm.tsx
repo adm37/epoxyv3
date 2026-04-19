@@ -3,48 +3,55 @@ import { Send } from "lucide-react";
 export default function QuoteForm() {
   return (
     <div className="glass-card-light p-8 md:p-12 rounded-3xl shadow-2xl shadow-black/5">
-      <form className="space-y-8">
+      <form
+        className="space-y-8"
+        action="https://formsubmit.co/info@klasseepoxy.nl"
+        method="POST"
+      >
+        <input type="hidden" name="_subject" value="Nieuwe offerteaanvraag via klasseepoxy.nl" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value="https://klasseepoxy.nl/offerte?success=1" />
         <div className="grid md:grid-cols-2 gap-8">
           <div className="space-y-2">
             <label className="text-[10px] font-bold uppercase tracking-widest opacity-40">Naam *</label>
-            <input required className="w-full bg-black/5 border-b border-black/10 py-4 px-2 outline-none focus:border-epoxy-accent transition-colors text-epoxy-black" placeholder="Voornaam" />
+            <input required name="voornaam" className="w-full bg-black/5 border-b border-black/10 py-4 px-2 outline-none focus:border-epoxy-accent transition-colors text-epoxy-black" placeholder="Voornaam" />
           </div>
           <div className="space-y-2">
             <label className="text-[10px] font-bold uppercase tracking-widest opacity-40">Achternaam *</label>
-            <input required className="w-full bg-black/5 border-b border-black/10 py-4 px-2 outline-none focus:border-epoxy-accent transition-colors text-epoxy-black" placeholder="Achternaam" />
+            <input required name="achternaam" className="w-full bg-black/5 border-b border-black/10 py-4 px-2 outline-none focus:border-epoxy-accent transition-colors text-epoxy-black" placeholder="Achternaam" />
           </div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
           <div className="space-y-2">
             <label className="text-[10px] font-bold uppercase tracking-widest opacity-40">E-mailadres *</label>
-            <input required type="email" className="w-full bg-black/5 border-b border-black/10 py-4 px-2 outline-none focus:border-epoxy-accent transition-colors text-epoxy-black" placeholder="naam@voorbeeld.nl" />
+            <input required name="email" type="email" className="w-full bg-black/5 border-b border-black/10 py-4 px-2 outline-none focus:border-epoxy-accent transition-colors text-epoxy-black" placeholder="naam@voorbeeld.nl" />
           </div>
           <div className="space-y-2">
             <label className="text-[10px] font-bold uppercase tracking-widest opacity-40">Telefoonnummer *</label>
-            <input required type="tel" className="w-full bg-black/5 border-b border-black/10 py-4 px-2 outline-none focus:border-epoxy-accent transition-colors text-epoxy-black" placeholder="06 12345678" />
+            <input required name="telefoon" type="tel" className="w-full bg-black/5 border-b border-black/10 py-4 px-2 outline-none focus:border-epoxy-accent transition-colors text-epoxy-black" placeholder="06 12345678" />
           </div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
           <div className="space-y-2">
             <label className="text-[10px] font-bold uppercase tracking-widest opacity-40">Bedrijf (Optioneel)</label>
-            <input className="w-full bg-black/5 border-b border-black/10 py-4 px-2 outline-none focus:border-epoxy-accent transition-colors text-epoxy-black" placeholder="Bedrijfsnaam" />
+            <input name="bedrijf" className="w-full bg-black/5 border-b border-black/10 py-4 px-2 outline-none focus:border-epoxy-accent transition-colors text-epoxy-black" placeholder="Bedrijfsnaam" />
           </div>
           <div className="space-y-2">
             <label className="text-[10px] font-bold uppercase tracking-widest opacity-40">Website (Optioneel)</label>
-            <input className="w-full bg-black/5 border-b border-black/10 py-4 px-2 outline-none focus:border-epoxy-accent transition-colors text-epoxy-black" placeholder="www.voorbeeld.nl" />
+            <input name="website" className="w-full bg-black/5 border-b border-black/10 py-4 px-2 outline-none focus:border-epoxy-accent transition-colors text-epoxy-black" placeholder="www.voorbeeld.nl" />
           </div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
           <div className="md:col-span-2 space-y-2">
             <label className="text-[10px] font-bold uppercase tracking-widest opacity-40">Adres *</label>
-            <input required className="w-full bg-black/5 border-b border-black/10 py-4 px-2 outline-none focus:border-epoxy-accent transition-colors text-epoxy-black" placeholder="Straat, nr, postcode, plaats" />
+            <input required name="adres" className="w-full bg-black/5 border-b border-black/10 py-4 px-2 outline-none focus:border-epoxy-accent transition-colors text-epoxy-black" placeholder="Straat, nr, postcode, plaats" />
           </div>
           <div className="space-y-2">
             <label className="text-[10px] font-bold uppercase tracking-widest opacity-40">Aantal m2 *</label>
-            <input required type="number" className="w-full bg-black/5 border-b border-black/10 py-4 px-2 outline-none focus:border-epoxy-accent transition-colors text-epoxy-black" placeholder="m2" />
+            <input required name="aantal_m2" type="number" className="w-full bg-black/5 border-b border-black/10 py-4 px-2 outline-none focus:border-epoxy-accent transition-colors text-epoxy-black" placeholder="m2" />
           </div>
         </div>
 
@@ -68,7 +75,7 @@ export default function QuoteForm() {
 
         <div className="space-y-2">
           <label className="text-[10px] font-bold uppercase tracking-widest opacity-40">Aanvullende informatie *</label>
-          <textarea required className="w-full bg-black/5 border-b border-black/10 py-4 px-2 outline-none focus:border-epoxy-accent transition-colors text-epoxy-black min-h-[120px]" placeholder="Vertel ons meer over uw project..." />
+          <textarea required name="aanvullende_informatie" className="w-full bg-black/5 border-b border-black/10 py-4 px-2 outline-none focus:border-epoxy-accent transition-colors text-epoxy-black min-h-[120px]" placeholder="Vertel ons meer over uw project..." />
         </div>
         
         <button className="btn-dark w-full py-6 flex items-center justify-center gap-4 text-lg">
