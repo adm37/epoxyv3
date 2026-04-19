@@ -1,6 +1,8 @@
 import { PaintRoller, Instagram, Facebook, Music2 as Tiktok } from "lucide-react";
+import { SITE_URL } from "../data/site";
 
 export default function Footer() {
+  const sitemapUrl = `${SITE_URL}/sitemap/`;
   const cities = [
     "Almere", "Amstelveen", "Amsterdam", "Den Haag", "Haarlem", 
     "Hoofddorp", "Purmerend", "Rotterdam", "Utrecht", "Zaandam"
@@ -37,6 +39,7 @@ export default function Footer() {
                 <li><a href="/werkwijze/" className="hover:text-epoxy-accent transition-colors">Werkwijze</a></li>
                 <li><a href="/portfolio/" className="hover:text-epoxy-accent transition-colors">Portfolio</a></li>
                 <li><a href="/faq/" className="hover:text-epoxy-accent transition-colors">FAQ</a></li>
+                <li><a href={sitemapUrl} className="hover:text-epoxy-accent transition-colors">Sitemap</a></li>
               </ul>
             </div>
             <div>
@@ -81,6 +84,7 @@ export default function Footer() {
           <div className="flex gap-8">
             <a href="/privacy/" className="hover:text-epoxy-accent transition-colors">Privacy</a>
             <a href="/algemene-voorwaarden/" className="hover:text-epoxy-accent transition-colors">Algemene voorwaarden</a>
+            <a href={sitemapUrl} className="hover:text-epoxy-accent transition-colors">Sitemap</a>
           </div>
         </div>
       </div>

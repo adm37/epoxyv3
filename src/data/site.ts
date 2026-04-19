@@ -65,6 +65,12 @@ export const staticPages = [
       'Vraag in 2 minuten een gratis, vrijblijvende offerte aan voor uw epoxy vloer. Klasse Epoxy reageert binnen 24 uur met een scherpe prijsopgave op maat.',
   },
   {
+    path: '/sitemap',
+    title: 'Sitemap: Alle Pagina\'s van Klasse Epoxy | Klasse Epoxy',
+    description:
+      'Bekijk een compleet overzicht van alle pagina\'s op klasseepoxy.nl, inclusief diensten, steden en kennispagina\'s.',
+  },
+  {
     path: '/privacy',
     title: 'Privacybeleid | Klasse Epoxy',
     description:

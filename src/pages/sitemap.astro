@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getAllPublicPaths, slugToTitle, toAbsoluteUrl } from '../data/site';
+
+const paths = getAllPublicPaths().sort((a, b) => a.localeCompare(b));
+
+const labelForPath = (path: string) => {
+  if (path === '/') return 'Home';
+  return slugToTitle(path.replace(/^\//, ''));
+};
+---
+
+<BaseLayout
+  title="Sitemap: Alle Pagina's van Klasse Epoxy | Klasse Epoxy"
+  description="Bekijk een compleet overzicht van alle pagina's op klasseepoxy.nl, inclusief diensten, steden en kennispagina's."
+>
+  <main class="min-h-screen bg-white py-32">
+    <section class="max-w-7xl mx-auto px-6">
+      <h1 class="text-5xl md:text-7xl font-display font-black uppercase tracking-tighter text-epoxy-black mb-6">
+        Sitemap
+      </h1>
+      <p class="text-epoxy-black/60 max-w-3xl mb-12">
+        Overzicht van alle interne pagina's op Klasse Epoxy. Deze pagina helpt zowel bezoekers als crawlers om alle content te vinden.
+      </p>
+
+      <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-4">
+        {paths.map((path) => (
+          <li>
+            <a href={toAbsoluteUrl(path)} class="text-sm font-bold uppercase tracking-wider text-epoxy-black/80 hover:text-epoxy-accent transition-colors">
+              {labelForPath(path)}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+  </main>
+</BaseLayout>
