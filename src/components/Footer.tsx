@@ -51,7 +51,7 @@ export default function Footer() {
               <h4 className="text-[10px] font-bold uppercase tracking-widest text-white/40 mb-6">Contact</h4>
               <ul className="space-y-3 text-[10px] font-bold text-white uppercase tracking-widest">
                 <li><a href="/contact" className="hover:text-epoxy-accent transition-colors">Contactpagina</a></li>
-                <li><a href="mailto:info@klasse-epoxy.nl" className="hover:text-epoxy-accent transition-colors normal-case tracking-normal">info@klasse-epoxy.nl</a></li>
+                <li><a href="mailto:info@klasseepoxy.nl" className="hover:text-epoxy-accent transition-colors normal-case tracking-normal">info@klasseepoxy.nl</a></li>
                 <li><a href="tel:+31201234567" className="hover:text-epoxy-accent transition-colors">+31 (0) 20 123 4567</a></li>
               </ul>
               <div className="mt-6 flex gap-4" aria-label="Social placeholders verborgen voor SEO totdat echte profielen zijn toegevoegd">

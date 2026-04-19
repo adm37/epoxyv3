@@ -9,7 +9,7 @@ export const DEFAULT_OG_IMAGE =
   'https://i.ibb.co/KxK89vjx/Epoxy-vloer-www-klasse-epoxy-nl.png';
 export const PHONE_DISPLAY = '+31 (0) 20 123 4567';
 export const PHONE_E164 = '+31201234567';
-export const EMAIL = 'info@klasse-epoxy.nl';
+export const EMAIL = 'info@klasseepoxy.nl';
 export const ADDRESS = {
   streetAddress: 'Heiligeweg 105B',
   postalCode: '1561 DG',

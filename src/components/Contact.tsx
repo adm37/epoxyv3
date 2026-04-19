@@ -34,7 +34,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="text-[10px] font-bold uppercase tracking-widest opacity-40 mb-1">Email ons</div>
-                    <div className="text-xl font-display font-bold text-epoxy-black">info@klasse-epoxy.nl</div>
+                    <div className="text-xl font-display font-bold text-epoxy-black">info@klasseepoxy.nl</div>
                   </div>
                 </div>
 
