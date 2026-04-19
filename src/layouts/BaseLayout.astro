@@ -23,7 +23,11 @@ const {
 const pathname = Astro.url.pathname === '' ? '/' : Astro.url.pathname;
 const pageMeta = getPageMeta(pathname, title, description);
 const seoTitle = pageMeta.title || SITE_NAME;
-const seoDescription = pageMeta.description || DEFAULT_DESCRIPTION;
+const rawSeoDescription = pageMeta.description || DEFAULT_DESCRIPTION;
+const seoDescription =
+  rawSeoDescription.length > 120
+    ? `${rawSeoDescription.slice(0, 117).trimEnd()}...`
+    : rawSeoDescription;
 const canonicalUrl = toAbsoluteUrl(pathname);
 const socialImage = image || DEFAULT_OG_IMAGE;
 const schemas = getPageSchemas(pathname, seoTitle, seoDescription, schemaType || pageMeta.schemaType);
