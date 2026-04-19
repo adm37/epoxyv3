@@ -29,7 +29,7 @@ export default function Hero() {
             preload="auto"
             onError={() => setVideoFailed(true)}
           >
-            <source src="https://klasseepoxy.nl/klasse-epoxy-video.mp4" type="video/mp4" />
+            <source src="/video/klasse-epoxy-video.mp4" type="video/mp4" />
           </video>
         )}
       </div>
