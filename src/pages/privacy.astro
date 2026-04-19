@@ -1,0 +1,102 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+---
+
+<BaseLayout title="Privacy Beleid - Epoxy Vloeren" description="Ons privacy beleid voor de verwerking van persoonsgegevens bij Klasse Epoxy.">
+  <div class="min-h-screen bg-white selection:bg-epoxy-accent selection:text-epoxy-black">
+    <Navbar client:load />
+
+    <main class="pt-32 pb-24">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="mb-12">
+          <h1 class="text-5xl md:text-7xl font-display font-black tracking-tighter uppercase mb-6">
+            Privacy <span class="text-epoxy-accent">Beleid</span>
+          </h1>
+          <p class="text-black/40 font-bold uppercase tracking-widest text-xs">
+            Laatst bijgewerkt: 13 april 2026
+          </p>
+        </div>
+
+        <div class="prose prose-lg max-w-none text-black/70 space-y-12 leading-relaxed">
+          <section>
+            <h2 class="text-2xl font-bold text-black uppercase tracking-tight mb-4">1. Inleiding</h2>
+            <p>
+              Klasse Epoxy respecteert uw privacy en draagt er zorg voor dat de persoonlijke informatie die u ons verschaft vertrouwelijk wordt behandeld. In dit privacybeleid leggen we uit welke gegevens we verzamelen, waarom we dat doen en hoe we hiermee omgaan.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold text-black uppercase tracking-tight mb-4">2. Welke gegevens verzamelen we?</h2>
+            <p>
+              Wanneer u contact met ons opneemt of een offerte aanvraagt, kunnen we de volgende persoonsgegevens van u vragen:
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>Naam en contactgegevens (telefoonnummer, e-mailadres)</li>
+              <li>Adresgegevens voor het project</li>
+              <li>Projectspecifieke informatie (oppervlakte, type ruimte, etc.)</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold text-black uppercase tracking-tight mb-4">3. Waarom verzamelen we deze gegevens?</h2>
+            <p>
+              We gebruiken uw gegevens uitsluitend voor de volgende doeleinden:
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li>Het beantwoorden van uw vragen</li>
+              <li>Het opstellen van offertes</li>
+              <li>Het uitvoeren van opdrachten</li>
+              <li>Het verbeteren van onze dienstverlening</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold text-black uppercase tracking-tight mb-4">4. Delen van gegevens</h2>
+            <p>
+              Uw persoonsgegevens worden niet verkocht, verhuurd of op andere wijze verstrekt aan derden, tenzij dit noodzakelijk is voor de uitvoering van onze diensten of wanneer wij hiertoe wettelijk verplicht zijn.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold text-black uppercase tracking-tight mb-4">5. Beveiliging</h2>
+            <p>
+              We nemen passende technische en organisatorische maatregelen om uw persoonsgegevens te beschermen tegen verlies, misbruik of ongeautoriseerde toegang.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold text-black uppercase tracking-tight mb-4">6. Bewaartermijn</h2>
+            <p>
+              Uw persoonsgegevens worden niet langer bewaard dan noodzakelijk is voor de doeleinden waarvoor ze zijn verzameld, of zoals vereist door de wet.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold text-black uppercase tracking-tight mb-4">7. Uw rechten</h2>
+            <p>
+              U heeft het recht om uw persoonsgegevens in te zien, te corrigeren of te laten verwijderen. Neem hiervoor contact met ons op via de contactgegevens op deze website.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold text-black uppercase tracking-tight mb-4">8. Contact</h2>
+            <p>
+              Voor vragen over dit privacybeleid of de verwerking van uw persoonsgegevens kunt u contact met ons opnemen via:
+            </p>
+            <div class="mt-4 p-6 bg-black/5 rounded-lg">
+              <p class="font-semibold">Klasse Epoxy</p>
+              <p>Heiligeweg 105B</p>
+              <p>1561 DG Krommenie</p>
+              <p>E-mail: info@klasse-epoxy.nl</p>
+              <p>Telefoon: 06 123 456 78</p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <Footer client:load />
+  </div>
+</BaseLayout>

@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar';
+import DetailedProcess from '../components/DetailedProcess';
+import Footer from '../components/Footer';
+import CTA from '../components/CTA';
+---
+
+<BaseLayout title="Onze Werkwijze - Epoxy Vloeren" description="Ontdek ons professionele proces voor het leggen van epoxy vloeren. Van offerte tot oplevering, stap voor stap uitgelegd.">
+  <div class="min-h-screen selection:bg-epoxy-accent selection:text-epoxy-black">
+    <Navbar client:load />
+    <main class="pt-20">
+      <DetailedProcess client:load />
+      <CTA client:load />
+    </main>
+    <Footer client:load />
+  </div>
+</BaseLayout>

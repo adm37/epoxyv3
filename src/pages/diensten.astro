@@ -1,0 +1,126 @@
+http://localhost:3005/metallic-epoxy---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import CTA from '../components/CTA';
+import { Sparkles, ArrowRight } from 'lucide-react';
+---
+
+<BaseLayout title="Onze Diensten - Epoxy Vloeren" description="Ontdek onze professionele epoxy vloerdiensten: Epoxy Coating, Metallic Epoxy en Flake Epoxy voor elke ruimte.">
+  <div class="min-h-screen bg-white selection:bg-epoxy-accent selection:text-epoxy-black">
+    <Navbar client:load />
+
+    <main class="pt-20">
+      {/* Hero Section */}
+      <section class="relative py-32 bg-epoxy-black overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+          <img
+            src="https://i.ibb.co/KxK89vjx/Epoxy-vloer-www-klasse-epoxy-nl.png"
+            alt="Services Hero"
+            class="w-full h-full object-cover"
+            referrerpolicy="no-referrer"
+          />
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
+          <div class="mb-6 inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-epoxy-accent text-[10px] font-bold uppercase tracking-[0.3em]">
+            <Sparkles className="w-3 h-3" client:load />
+            Onze Expertise
+          </div>
+          <h1 class="text-5xl md:text-8xl text-white uppercase tracking-tighter mb-8 leading-tight">
+            ONZE <br /><span class="opacity-40">DIENSTEN.</span>
+          </h1>
+          <p class="text-white/60 text-lg md:text-xl max-w-2xl mx-auto">
+            Van luxe designvloeren voor uw woning tot zwaar belastbare industriële coatings.
+            Ontdek de perfecte epoxy oplossing voor elk type ruimte.
+          </p>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section class="py-32">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <div class="group">
+              <a href="/epoxy-coating" class="block h-full border-b border-black/10 pb-12 hover:border-epoxy-accent transition-colors">
+                <div class="relative aspect-[16/10] overflow-hidden rounded-3xl mb-8">
+                  <img
+                    src="https://i.ibb.co/7tCK67SP/19c0692b-773c-47b8-9586-aa73bb06891d.png"
+                    alt="Epoxy Coating"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    referrerpolicy="no-referrer"
+                  />
+                  <div class="absolute top-6 right-6 bg-epoxy-accent text-epoxy-black text-[10px] font-bold uppercase tracking-widest px-4 py-2 rounded-full">
+                    Populair
+                  </div>
+                </div>
+
+                <h3 class="text-3xl font-display font-black text-epoxy-black mb-4 uppercase tracking-tighter group-hover:text-epoxy-accent transition-colors">
+                  Epoxy Coating
+                </h3>
+                <p class="text-epoxy-black/60 leading-relaxed mb-6 line-clamp-2">
+                  Een luxe, naadloze afwerking voor woningen en moderne interieurs. Volledig vloeistofdicht en perfect voor vloerverwarming.
+                </p>
+                <div class="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-epoxy-black">
+                  Lees Meer <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" client:load />
+                </div>
+              </a>
+            </div>
+
+            <div class="group">
+              <a href="/metallic-epoxy" class="block h-full border-b border-black/10 pb-12 hover:border-epoxy-accent transition-colors">
+                <div class="relative aspect-[16/10] overflow-hidden rounded-3xl mb-8">
+                  <img
+                    src="https://i.ibb.co/5hXQHXQF/65a662fe-2c67-43a2-b2fc-10886c1211f8.png"
+                    alt="Metallic Epoxy"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    referrerpolicy="no-referrer"
+                  />
+                  <div class="absolute top-6 right-6 bg-epoxy-accent text-epoxy-black text-[10px] font-bold uppercase tracking-widest px-4 py-2 rounded-full">
+                    Populair
+                  </div>
+                </div>
+
+                <h3 class="text-3xl font-display font-black text-epoxy-black mb-4 uppercase tracking-tighter group-hover:text-epoxy-accent transition-colors">
+                  Metallic Epoxy
+                </h3>
+                <p class="text-epoxy-black/60 leading-relaxed mb-6 line-clamp-2">
+                  Exclusieve designvloeren met unieke diepte-effecten die doen denken aan marmer of vloeibaar metaal. Elke vloer is een uniek kunstwerk.
+                </p>
+                <div class="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-epoxy-black">
+                  Lees Meer <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" client:load />
+                </div>
+              </a>
+            </div>
+
+            <div class="group">
+              <a href="/flake-epoxy" class="block h-full border-b border-black/10 pb-12 hover:border-epoxy-accent transition-colors">
+                <div class="relative aspect-[16/10] overflow-hidden rounded-3xl mb-8">
+                  <img
+                    src="https://i.ibb.co/4wXWTCnJ/ccda1e1d-cdc0-482e-91ca-ddac2648669e.png"
+                    alt="Flake Epoxy"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    referrerpolicy="no-referrer"
+                  />
+                </div>
+
+                <h3 class="text-3xl font-display font-black text-epoxy-black mb-4 uppercase tracking-tighter group-hover:text-epoxy-accent transition-colors">
+                  Flake Epoxy
+                </h3>
+                <p class="text-epoxy-black/60 leading-relaxed mb-6 line-clamp-2">
+                  Decoratieve vlokkenvloeren die extreem slijtvast en antislip zijn. Ideaal voor showrooms, winkels en garages.
+                </p>
+                <div class="inline-flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.2em] text-epoxy-black">
+                  Lees Meer <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" client:load />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <CTA client:load />
+    </main>
+
+    <Footer client:load />
+  </div>
+</BaseLayout>

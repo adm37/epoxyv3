@@ -1,0 +1,101 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+---
+
+<BaseLayout title="Algemene Voorwaarden - Epoxy Vloeren" description="Algemene voorwaarden voor opdrachtneming, offertes en leveringen van Klasse Epoxy.">
+  <div class="min-h-screen bg-white selection:bg-epoxy-accent selection:text-epoxy-black">
+    <Navbar client:load />
+
+    <main class="pt-32 pb-24">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="mb-12">
+          <h1 class="text-5xl md:text-7xl font-display font-black tracking-tighter uppercase mb-6">
+            Algemene <span class="text-epoxy-accent">Voorwaarden</span>
+          </h1>
+          <p class="text-black/40 font-bold uppercase tracking-widest text-xs">
+            Laatst bijgewerkt: 11 april 2026
+          </p>
+        </div>
+
+        <div class="prose prose-lg max-w-none text-black/70 space-y-12 leading-relaxed">
+          <section>
+            <h2 class="text-2xl font-bold text-black uppercase tracking-tight mb-4">1. Toepasselijkheid</h2>
+            <p>
+              Deze algemene voorwaarden zijn van toepassing op alle offertes, overeenkomsten en leveringen van Klasse Epoxy,
+              gevestigd te Amsterdam, hierna te noemen "Opdrachtnemer". Door het accepteren van een offerte of het plaatsen van een opdracht
+              verklaart de opdrachtgever, hierna te noemen "Opdrachtgever", zich akkoord met deze voorwaarden.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold text-black uppercase tracking-tight mb-4">2. Offertes</h2>
+            <p>
+              Alle offertes zijn vrijblijvend en geldig gedurende 30 dagen, tenzij anders vermeld. Prijzen zijn exclusief BTW en andere
+              bijkomende kosten tenzij uitdrukkelijk anders vermeld.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold text-black uppercase tracking-tight mb-4">3. Uitvoering van de opdracht</h2>
+            <p>
+              Opdrachtnemer zal de opdracht naar beste inzicht en vermogen uitvoeren. Opdrachtnemer heeft het recht om derden in te schakelen
+              voor de uitvoering van de opdracht.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold text-black uppercase tracking-tight mb-4">4. Levering en levertijd</h2>
+            <p>
+              Opgegeven levertijden zijn indicatief. Overschrijding van de levertijd geeft Opdrachtgever niet het recht op ontbinding
+              of schadevergoeding, tenzij de overschrijding zodanig is dat van Opdrachtgever redelijkerwijs niet gevergd kan worden de
+              overeenkomst in stand te laten.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold text-black uppercase tracking-tight mb-4">5. Betaling</h2>
+            <p>
+              Betaling dient te geschieden binnen 14 dagen na factuurdatum, tenzij anders overeengekomen. Bij niet tijdige betaling
+              is Opdrachtgever in verzuim en is Opdrachtnemer gerechtigd rente in rekening te brengen.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold text-black uppercase tracking-tight mb-4">6. Garantie</h2>
+            <p>
+              Opdrachtnemer geeft garantie op de geleverde epoxy vloeren conform de specificaties in de offerte. De garantieperiode
+              bedraagt 2 jaar, mits het onderhoud conform de instructies van Opdrachtnemer wordt uitgevoerd.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold text-black uppercase tracking-tight mb-4">7. Aansprakelijkheid</h2>
+            <p>
+              Opdrachtnemer is slechts aansprakelijk voor schade die het directe gevolg is van opzet of grove schuld van Opdrachtnemer.
+              De aansprakelijkheid is in alle gevallen beperkt tot het factuurbedrag van de opdracht.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold text-black uppercase tracking-tight mb-4">8. Geschillen</h2>
+            <p>
+              Op alle overeenkomsten is Nederlands recht van toepassing. Geschillen zullen worden voorgelegd aan de bevoegde rechter
+              in Amsterdam.
+            </p>
+          </section>
+
+          <section>
+            <h2 class="text-2xl font-bold text-black uppercase tracking-tight mb-4">9. Contact</h2>
+            <p>
+              Voor vragen over deze algemene voorwaarden kunt u contact opnemen met Klasse Epoxy via de contactgegevens op deze website.
+            </p>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <Footer client:load />
+  </div>
+</BaseLayout>

@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar';
+import QuoteForm from '../components/QuoteForm';
+import Footer from '../components/Footer';
+import { CheckCircle2 } from 'lucide-react';
+---
+
+<BaseLayout title="Offerte Aanvragen - Epoxy Vloeren" description="Vraag vrijblijvend een offerte aan voor uw epoxy vloer project. Binnen 24 uur reactie en gratis advies.">
+  <div class="min-h-screen selection:bg-epoxy-accent selection:text-epoxy-black bg-white">
+    <Navbar client:load />
+
+    <main class="pt-32 pb-32">
+      <div class="max-w-4xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <span class="section-subtitle">Offerte</span>
+          <h1 class="section-title mb-6">VRAAG UW <br /> <span class="opacity-20">OFFERTE AAN.</span></h1>
+          <p class="text-epoxy-black/60 text-lg max-w-2xl mx-auto">
+            Vul het onderstaande formulier in en ontvang binnen 24 uur een vrijblijvende prijsopgave voor uw project.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+          <div class="flex items-center gap-2 justify-center py-3 px-4 glass-card-light rounded-full">
+            <CheckCircle2 className="w-4 h-4 text-epoxy-accent" client:load />
+            <span class="text-[9px] font-bold uppercase tracking-widest text-epoxy-black/60">Binnen 24u reactie</span>
+          </div>
+          <div class="flex items-center gap-2 justify-center py-3 px-4 glass-card-light rounded-full">
+            <CheckCircle2 className="w-4 h-4 text-epoxy-accent" client:load />
+            <span class="text-[9px] font-bold uppercase tracking-widest text-epoxy-black/60">Gratis advies</span>
+          </div>
+          <div class="flex items-center gap-2 justify-center py-3 px-4 glass-card-light rounded-full">
+            <CheckCircle2 className="w-4 h-4 text-epoxy-accent" client:load />
+            <span class="text-[9px] font-bold uppercase tracking-widest text-epoxy-black/60">Vrijblijvende offerte</span>
+          </div>
+          <div class="flex items-center gap-2 justify-center py-3 px-4 glass-card-light rounded-full">
+            <CheckCircle2 className="w-4 h-4 text-epoxy-accent" client:load />
+            <span class="text-[9px] font-bold uppercase tracking-widest text-epoxy-black/60">Vakmanschap</span>
+          </div>
+        </div>
+
+        <QuoteForm client:load />
+      </div>
+    </main>
+
+    <Footer client:load />
+  </div>
+</BaseLayout>

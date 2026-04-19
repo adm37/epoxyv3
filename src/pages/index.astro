@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navbar from '../components/Navbar';
+import Hero from '../components/Hero';
+import Trust from '../components/Trust';
+import Services from '../components/Services';
+import Process from '../components/Process';
+import Portfolio from '../components/Portfolio';
+import Testimonials from '../components/Testimonials';
+import FAQ from '../components/FAQ';
+import CTA from '../components/CTA';
+import Footer from '../components/Footer';
+---
+
+<BaseLayout title="Epoxy Vloeren - Professionele Vloercoatings" description="Professionele epoxy vloeren voor garage, woonkamer, badkamer en industrie. Metallic en flake effecten beschikbaar.">
+  <div class="min-h-screen selection:bg-epoxy-accent selection:text-epoxy-black">
+    <Navbar client:load />
+    <main>
+      <Hero client:load />
+      <Trust client:load />
+      <Services client:load />
+      <Process client:load />
+      <Portfolio client:load />
+      <Testimonials client:load />
+      <FAQ client:load />
+      <CTA client:load />
+    </main>
+    <Footer client:load />
+  </div>
+</BaseLayout>

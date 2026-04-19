@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white text-epoxy-black font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold tracking-tighter;
+  }
+
+  p {
+    @apply mb-6 leading-relaxed;
+  }
+}
+
+@layer components {
+  .video-overlay {
+    @apply absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60 z-10;
+  }
+
+  .glass-card {
+    @apply bg-black/10 backdrop-blur-md border border-black/20;
+  }
+
+  .glass-card-light {
+    @apply bg-black/5 backdrop-blur-md border border-black/10;
+  }
+
+  .btn-dark {
+    @apply relative overflow-hidden bg-epoxy-black text-white font-bold uppercase tracking-tighter px-10 py-4 transition-all duration-300 hover:bg-epoxy-accent hover:text-black hover:scale-105 active:scale-95;
+  }
+
+  .section-title {
+    @apply text-5xl md:text-8xl text-epoxy-black uppercase tracking-tighter;
+  }
+
+  .section-subtitle {
+    @apply text-epoxy-accent text-xs font-bold uppercase tracking-[0.4em] block mb-4;
+  }
+}
