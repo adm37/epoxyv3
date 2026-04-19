@@ -145,7 +145,8 @@ export const citySlugs = [
 ];
 
 export function toAbsoluteUrl(pathname: string) {
-  const cleanPath = pathname === '/' ? '/' : pathname.replace(/\/$/, '');
+  if (pathname === '/' || pathname === '') return `${SITE_URL}/`;
+  const cleanPath = pathname.replace(/\/$/, '') + '/';
   return `${SITE_URL}${cleanPath}`;
 }
 
