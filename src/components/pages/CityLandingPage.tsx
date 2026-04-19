@@ -35,28 +35,16 @@ export default function CityLandingPage({ slug = "" }: Props) {
           </div>
           <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
               className="mb-6 inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-epoxy-accent text-[10px] font-bold uppercase tracking-[0.3em]"
             >
               <MapPin className="w-3 h-3" />
               Lokaal Specialist in {cityName}
             </motion.div>
-            <motion.h1 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="text-5xl md:text-8xl text-white uppercase tracking-tighter mb-8"
-            >
+            <motion.h1 className="text-5xl md:text-8xl text-white uppercase tracking-tighter mb-8">
               EPOXY VLOER <br />
               <span className="text-epoxy-accent">{cityName.toUpperCase()}.</span>
             </motion.h1>
-            <motion.p 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4 }}
-              className="text-white/60 text-lg md:text-xl max-w-3xl mx-auto mb-12"
-            >
+            <motion.p className="text-white/60 text-lg md:text-xl max-w-3xl mx-auto mb-12">
               Zoekt u een duurzame, naadloze en moderne vloeroplossing in {cityName}? 
               Klasse Epoxy is uw gecertificeerde partner voor hoogwaardige epoxy gietvloeren, 
               industriële coatings en exclusief vloerdesign.

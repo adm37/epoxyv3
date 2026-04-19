@@ -61,8 +61,6 @@ export default function ServicePage({ slug = "epoxy-coating" }: Props) {
           </div>
           <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
               className="mb-6 inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-epoxy-accent text-[10px] font-bold uppercase tracking-[0.3em]"
             >
               <data.icon className="w-3 h-3" />

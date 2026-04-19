@@ -13,10 +13,7 @@ export default function CTA() {
             Vraag vandaag nog een vrijblijvende offerte aan.
           </p>
         </div>
-        <motion.div
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-        >
+        <div>
           <a
             href="/offerte"
             className="bg-epoxy-black text-white px-12 py-6 font-black uppercase tracking-tighter text-xl flex items-center gap-4 hover:bg-white hover:text-black transition-colors"
@@ -24,7 +21,7 @@ export default function CTA() {
             START NU
             <ArrowRight className="w-6 h-6" />
           </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

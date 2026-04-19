@@ -11,7 +11,7 @@ export default function ContactInfo() {
     {
       icon: Mail,
       label: "Email ons",
-      value: "info@klasseepoxy.nl",
+      value: "info@klasse-epoxy.nl",
       description: "We reageren binnen 24 uur"
     },
     {

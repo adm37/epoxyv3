@@ -8,7 +8,7 @@ import CTA from '../components/CTA';
 
 <BaseLayout title="Contact - Epoxy Vloeren" description="Neem contact op voor vragen over epoxy vloeren. Ons team helpt u graag met advies en offertes voor uw vloerproject.">
   <div class="min-h-screen selection:bg-epoxy-accent selection:text-epoxy-black bg-white">
-    <Navbar client:load />
+    <Navbar />
 
     <main class="pt-32 pb-32">
       <div class="max-w-7xl mx-auto px-6">
@@ -21,7 +21,7 @@ import CTA from '../components/CTA';
           </p>
         </div>
 
-        <ContactInfo client:load />
+        <ContactInfo />
 
         <div class="mt-20 w-full h-[450px] rounded-3xl overflow-hidden glass-card-light border border-black/5">
           <iframe
@@ -36,9 +36,9 @@ import CTA from '../components/CTA';
         </div>
       </div>
 
-      <CTA client:load />
+      <CTA />
     </main>
 
-    <Footer client:load />
+    <Footer />
   </div>
 </BaseLayout>

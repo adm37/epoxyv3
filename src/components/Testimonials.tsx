@@ -65,10 +65,6 @@ export default function Testimonials() {
           {reviews.map((review, i) => (
             <motion.div
               key={review.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.1 }}
-              viewport={{ once: true }}
               className="glass-card p-8 rounded-2xl relative group"
             >
               <div className="flex justify-between items-start mb-6">

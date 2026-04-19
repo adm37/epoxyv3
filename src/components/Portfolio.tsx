@@ -25,10 +25,6 @@ export default function Portfolio() {
           {projects.map((project, i) => (
             <motion.div
               key={`${project.title}-${project.category}-${i}`}
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: i * 0.1 }}
-              viewport={{ once: true }}
               className="group relative aspect-[16/10] overflow-hidden rounded-2xl cursor-pointer border border-black/5"
             >
               <img 

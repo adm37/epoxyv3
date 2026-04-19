@@ -36,10 +36,6 @@ export default function Process() {
           {steps.map((step, i) => (
             <motion.div
               key={step.number}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.1 }}
-              viewport={{ once: true }}
               className="relative"
             >
               <div className="text-8xl font-display font-black text-epoxy-black/5 absolute -top-12 -left-4">

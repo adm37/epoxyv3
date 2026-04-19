@@ -45,8 +45,6 @@ export default function ServicesPage() {
           </div>
           <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
               className="mb-6 inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-epoxy-accent text-[10px] font-bold uppercase tracking-[0.3em]"
             >
               <Sparkles className="w-3 h-3" />
@@ -69,10 +67,6 @@ export default function ServicesPage() {
               {allServices.map((service, i) => (
                 <motion.div
                   key={service.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.1 }}
-                  viewport={{ once: true }}
                   className="group"
                 >
                   <a href={`/${service.slug}`} className="block h-full border-b border-black/10 pb-12 hover:border-epoxy-accent transition-colors">

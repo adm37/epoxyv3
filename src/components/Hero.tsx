@@ -23,9 +23,6 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-20 max-w-5xl mx-auto px-6 text-center">
         <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.2 }}
           className="text-6xl md:text-[140px] leading-[0.85] mb-10 text-white text-glow"
         >
           EPOXY <br />
@@ -33,9 +30,6 @@ export default function Hero() {
         </motion.h1>
 
         <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.5 }}
           className="text-lg md:text-2xl text-white/60 max-w-2xl mx-auto mb-12 font-light tracking-wide"
         >
           De specialist in naadloze <strong>epoxy gietvloeren</strong> en exclusief <strong>epoxy vloer design</strong>. 
@@ -43,9 +37,6 @@ export default function Hero() {
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
           className="flex flex-col md:flex-row items-center justify-center gap-6"
         >
           <a href="/portfolio" className="btn-dark flex items-center gap-3">

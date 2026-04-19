@@ -35,28 +35,16 @@ export default function MetallicCityLandingPage({ slug = "" }: Props) {
           </div>
           <div className="relative z-10 max-w-7xl mx-auto px-6">
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
               className="mb-6 inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-epoxy-accent text-[10px] font-bold uppercase tracking-[0.3em]"
             >
               <Sparkles className="w-3 h-3" />
               Exclusief Design in {cityName}
             </motion.div>
-            <motion.h1 
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="text-5xl md:text-8xl text-white uppercase tracking-tighter mb-8 max-w-4xl"
-            >
+            <motion.h1 className="text-5xl md:text-8xl text-white uppercase tracking-tighter mb-8 max-w-4xl">
               METALLIC EPOXY <br />
               <span className="text-epoxy-accent">{cityName.toUpperCase()}.</span>
             </motion.h1>
-            <motion.p 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.4 }}
-              className="text-white/60 text-lg md:text-xl max-w-2xl mb-12 leading-relaxed"
-            >
+            <motion.p className="text-white/60 text-lg md:text-xl max-w-2xl mb-12 leading-relaxed">
               Creëer een unieke, luxueuze uitstraling met onze <strong>metallic epoxyvloeren</strong> in {cityName}. 
               Een naadloos design met diepte-effecten die doen denken aan marmer of vloeibaar metaal.
             </motion.p>

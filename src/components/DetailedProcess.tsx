@@ -80,10 +80,6 @@ export default function DetailedProcess() {
             {generalSteps.map((step, i) => (
               <motion.div
                 key={step.number}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: i * 0.1 }}
-                viewport={{ once: true }}
                 className="flex gap-8 md:gap-12 items-start group"
               >
                 <div className="text-4xl md:text-6xl font-display font-black text-epoxy-black/10 group-hover:text-epoxy-accent/20 transition-colors shrink-0 pt-2">
@@ -107,10 +103,6 @@ export default function DetailedProcess() {
           {serviceDetails.map((service, i) => (
             <motion.div
               key={service.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.1 }}
-              viewport={{ once: true }}
               className="glass-card-light p-10 rounded-3xl border border-black/5"
             >
               <h3 className="text-2xl font-display font-bold text-epoxy-black mb-8 uppercase tracking-tighter border-b border-black/5 pb-4">

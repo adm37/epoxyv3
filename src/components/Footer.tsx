@@ -1,4 +1,3 @@
-import { motion } from "motion/react";
 import { PaintRoller, Instagram, Facebook, Music2 as Tiktok } from "lucide-react";
 
 export default function Footer() {
@@ -49,17 +48,16 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <h4 className="text-[10px] font-bold uppercase tracking-widest text-white/40 mb-6">Social</h4>
-              <div className="flex gap-4">
-                <a href="#" className="w-10 h-10 rounded-full glass-card flex items-center justify-center text-white hover:text-epoxy-accent transition-colors">
-                  <Instagram className="w-4 h-4" />
-                </a>
-                <a href="#" className="w-10 h-10 rounded-full glass-card flex items-center justify-center text-white hover:text-epoxy-accent transition-colors">
-                  <Facebook className="w-4 h-4" />
-                </a>
-                <a href="#" className="w-10 h-10 rounded-full glass-card flex items-center justify-center text-white hover:text-epoxy-accent transition-colors">
-                  <Tiktok className="w-4 h-4" />
-                </a>
+              <h4 className="text-[10px] font-bold uppercase tracking-widest text-white/40 mb-6">Contact</h4>
+              <ul className="space-y-3 text-[10px] font-bold text-white uppercase tracking-widest">
+                <li><a href="/contact" className="hover:text-epoxy-accent transition-colors">Contactpagina</a></li>
+                <li><a href="mailto:info@klasse-epoxy.nl" className="hover:text-epoxy-accent transition-colors normal-case tracking-normal">info@klasse-epoxy.nl</a></li>
+                <li><a href="tel:+31201234567" className="hover:text-epoxy-accent transition-colors">+31 (0) 20 123 4567</a></li>
+              </ul>
+              <div className="mt-6 flex gap-4" aria-label="Social placeholders verborgen voor SEO totdat echte profielen zijn toegevoegd">
+                <span className="w-10 h-10 rounded-full glass-card flex items-center justify-center text-white/30"><Instagram className="w-4 h-4" /></span>
+                <span className="w-10 h-10 rounded-full glass-card flex items-center justify-center text-white/30"><Facebook className="w-4 h-4" /></span>
+                <span className="w-10 h-10 rounded-full glass-card flex items-center justify-center text-white/30"><Tiktok className="w-4 h-4" /></span>
               </div>
             </div>
           </div>

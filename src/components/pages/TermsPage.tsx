@@ -10,8 +10,6 @@ export default function TermsPage() {
       <main className="pt-32 pb-24">
         <div className="max-w-4xl mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
             className="mb-12"
           >
             <h1 className="text-5xl md:text-7xl font-display font-black tracking-tighter uppercase mb-6">

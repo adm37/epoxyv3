@@ -1,21 +1,76 @@
 ---
 import '../index.css';
-const { title = "Epoxy Vloeren", description = "Professionele epoxy vloeren voor garage, woonkamer, badkamer en industrie. Metallic en flake effecten beschikbaar." } = Astro.props;
+import {
+  DEFAULT_DESCRIPTION,
+  DEFAULT_OG_IMAGE,
+  EMAIL,
+  PHONE_DISPLAY,
+  SITE_NAME,
+  SITE_URL,
+  getPageMeta,
+  getPageSchemas,
+  toAbsoluteUrl,
+} from '../data/site';
+
+const {
+  title,
+  description,
+  image = DEFAULT_OG_IMAGE,
+  robots = 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
+  schemaType,
+} = Astro.props;
+
+const pathname = Astro.url.pathname === '' ? '/' : Astro.url.pathname;
+const pageMeta = getPageMeta(pathname, title, description);
+const seoTitle = pageMeta.title || SITE_NAME;
+const seoDescription = pageMeta.description || DEFAULT_DESCRIPTION;
+const canonicalUrl = toAbsoluteUrl(pathname);
+const socialImage = image || DEFAULT_OG_IMAGE;
+const schemas = getPageSchemas(pathname, seoTitle, seoDescription, schemaType || pageMeta.schemaType);
+const googleSiteVerification = process.env.GOOGLE_SITE_VERIFICATION || process.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
+const bingSiteVerification = process.env.BING_SITE_VERIFICATION || process.env.PUBLIC_BING_SITE_VERIFICATION;
 ---
 
 <!doctype html>
-<html lang="nl">
+<html lang="nl-NL">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title}</title>
-    <meta name="description" content={description} />
+    <title>{seoTitle}</title>
+    <meta name="description" content={seoDescription} />
+    <meta name="robots" content={robots} />
+    <meta name="googlebot" content={robots} />
+    <meta name="bingbot" content={robots} />
+    <meta name="author" content={SITE_NAME} />
+    <meta name="generator" content="Astro" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="format-detection" content="telephone=yes,address=yes,email=yes" />
+    <meta name="contact" content={EMAIL} />
+    <meta name="telephone" content={PHONE_DISPLAY} />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:locale" content="nl_NL" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={SITE_NAME} />
+    <meta property="og:title" content={seoTitle} />
+    <meta property="og:description" content={seoDescription} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={socialImage} />
+    <meta property="og:image:alt" content={seoTitle} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={seoTitle} />
+    <meta name="twitter:description" content={seoDescription} />
+    <meta name="twitter:image" content={socialImage} />
+    {googleSiteVerification && <meta name="google-site-verification" content={googleSiteVerification} />}
+    {bingSiteVerification && <meta name="msvalidate.01" content={bingSiteVerification} />}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <slot name="head" />
+    {schemas.map((schema) => (
+      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    ))}
   </head>
   <body>
-    <slot name="head" />
     <slot />
   </body>
 </html>

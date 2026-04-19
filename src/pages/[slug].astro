@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { citySlugs, getSlugSeo, keywordSlugs, serviceSlugs } from '../data/site';
 import ServicePage from '../components/pages/ServicePage';
 import CityLandingPage from '../components/pages/CityLandingPage';
 import MetallicCityLandingPage from '../components/pages/MetallicCityLandingPage';
@@ -8,61 +9,7 @@ import CoatingCityLandingPage from '../components/pages/CoatingCityLandingPage';
 import KeywordLandingPage from '../components/pages/KeywordLandingPage';
 
 export async function getStaticPaths() {
-  const keywordSlugs = [
-    "epoxy-vloer-coating", "epoxy-vloer", "epoxy-gietvloer", "epoxy-coating-garage",
-    "garagevloer-epoxy-coating", "epoxy-vloer-garage", "epoxy-coating-beton",
-    "betoncoating-epoxy", "betonvloer-coaten", "epoxy-coating-badkamer",
-    "badkamervloer-epoxy", "waterdichte-vloer-badkamer", "epoxy-douchevloer",
-    "epoxy-coating-buiten", "buitenvloer-epoxy", "terras-epoxy-coating",
-    "oprit-epoxy", "uv-bestendige-coating", "industriële-epoxy-coating",
-    "industriële-vloercoating", "magazijn-vloer-epoxy", "werkplaats-vloer-coating",
-    "esd-vloer-epoxy", "epoxy-coating-prijs", "epoxy-coating-kosten",
-    "epoxy-vloer-offerte",
-    "metallic-epoxy-vloer", "metallic-epoxyvloer", "metallic-vloer-epoxy",
-    "glanzende-epoxy-vloer", "metallic-gietvloer", "gietvloer-metallic", "metallic-gietvloer-prijs",
-    "metallic-epoxy-prijs", "metallic-epoxy-vloer-prijs-per-m2", "metallic-epoxy-kosten",
-    "metallic-gietvloer-prijs-per-m2", "metallic-epoxy-offerte", "metallic-epoxy-pigment",
-    "metallic-pigmentpoeder-epoxy", "mica-pigment-epoxy", "epoxy-metallic-poeder",
-    "metallic-kleurpigment-epoxy", "metallic-epoxy-vloer-leggen", "metallic-epoxy-woonkamer",
-    "metallic-vloer-woonkamer", "metallic-epoxy-interieur", "metallic-gietvloer-woning",
-    "metallic-epoxy-kleuren", "metallic-epoxy-goud", "metallic-epoxy-zilver",
-    "metallic-epoxy-koper", "metallic-epoxy-brons", "metallic-epoxy-grijs",
-    "metallic-epoxy-antraciet", "metallic-epoxy-marmerlook", "epoxy-marmereffect-vloer",
-    "marmer-vloer-epoxy", "epoxy-vloer-marmer-uitstraling", "metallic-epoxy-garage",
-    "metallic-garagevloer-epoxy", "metallic-epoxy-antislip-garage", "metallic-epoxy-showroom",
-    "metallic-vloer-winkel", "metallic-epoxy-kantoor", "metallic-vloer-horeca",
-    "metallic-epoxy-hotel", "metallic-epoxy-vloer-onderhoud", "metallic-epoxy-vloer-schoonmaken",
-    "metallic-epoxy-krasbestendig", "metallic-epoxy-vloer-voordelen", "metallic-epoxy-vloer-uitharden",
-    "metallic-epoxy-woonkamer", "metallic-epoxy-badkamer", "metallic-epoxy-met-glitter",
-    "metallic-epoxy-dieptewerking-effect", "metallic-epoxy-lichtspel-vloer", "metallic-epoxy-vloer-industrieel",
-    "metallic-epoxy-effect-uitleg",
-    "flake-epoxy-vloer", "epoxy-vloer-flakes", "flakes-epoxy-vloer", "flakesvloer", "flakes-vloer", "flake-vloer-epoxy", "epoxy-flakesvloer", "chipsvloer", "chips-vloer-epoxy", "epoxy-chipsvloer", "chipsvloer-prijs", "vlokkenvloer", "epoxy-vlokken", "vloer-met-vlokken", "epoxy-met-vlokken", "kleurvlokken-epoxy", "kleurchips-epoxy", "kleurvlokken-gietvloer", "vinyl-flakes-epoxy", "flake-epoxy-garage", "chipsvloer-garage", "vlokkenvloer-garage", "epoxy-flakes-garagevloer", "flake-epoxy-prijs", "flakesvloer-prijs-per-m2", "chipsvloer-kosten", "vlokkenvloer-prijs", "flake-epoxy-kleuren", "epoxy-vlokken-kleuren", "kleurvlokken-mixen", "gietvloer-met-vlokken", "gietvloer-flakes", "gietvloer-kleurvlokken", "gietvloer-vlokken-instrooien", "flake-epoxy-showroom", "chipsvloer-winkel", "flakesvloer-kantoor", "flakes-vloer-horeca", "epoxy-vloer-flakes-antislip", "flake-epoxy-full-broadcast", "kleurvlokken-goud-zilver-epoxy", "vinyl-flakes-epoxy-vloer", "epoxy-vloer-met-vlokken-camouflage", "gietvloer-met-kleurvlokken-kosten", "epoxy-vlokken-grijs-beige", "flakesvloer-onderhoud", "chipsvloer-schoonmaken", "epoxy-vlokken-bandsporen-garage", "flake-epoxy-woonkamer", "flake-epoxy-entree", "flake-epoxy-magazijn", "flake-epoxy-terrazzo-look", "epoxy-vlokken-terrazzolook", "flake-epoxy-sealer-topcoat"
-  ];
-
-  const serviceSlugs = ["epoxy-coating", "metallic-epoxy", "flake-epoxy"];
-
-  const cities = [
-    "alkmaar", "almere", "alphen-aan-den-rijn", "amersfoort", "amstelveen",
-    "amsterdam", "apeldoorn", "arnhem", "assen", "bergen-op-zoom",
-    "breda", "capelle-aan-den-ijssel", "delft", "den-haag", "deventer",
-    "dordrecht", "drachten", "ede", "eindhoven", "emmen",
-    "enschede", "gouda", "groningen", "haarlem", "haarlemmermeer",
-    "harderwijk", "heerlen", "helmond", "hengelo", "hilversum",
-    "hoofddorp", "hoogeveen", "katwijk", "leeuwarden", "leiden",
-    "lelystad", "middelburg", "nieuwegein", "nijmegen", "oss",
-    "purmerend", "roosendaal", "rotterdam", "s-hertogenbosch", "schiedam",
-    "sittard-geleen", "sneek", "spijkenisse", "tilburg", "utrecht",
-    "velsen", "venlo", "vlaardingen", "vlissingen", "westland",
-    "woerden", "zaandam", "zaanstad", "zeist", "zoetermeer", "zwolle"
-  ];
-  const citySlugs = [
-    ...cities.map(c => `epoxy-vloer-${c}`),
-    ...cities.map(c => `metallic-epoxy-vloer-${c}`),
-    ...cities.map(c => `flake-epoxy-vloer-${c}`),
-    ...cities.map(c => `epoxy-coating-vloer-${c}`),
-  ];
-
-  const allSlugs = [...keywordSlugs, ...serviceSlugs, ...citySlugs];
+  const allSlugs = Array.from(new Set([...keywordSlugs, ...serviceSlugs, ...citySlugs]));
 
   return allSlugs.map((slug) => ({
     params: { slug },
@@ -72,69 +19,30 @@ export async function getStaticPaths() {
 const { slug } = Astro.params;
 
 let componentType = 'keyword';
-let title = "Epoxy Vloeren";
-let description = "Professionele epoxy vloeren voor garage, woonkamer, badkamer en industrie.";
-
-const keywordSlugs = [
-  "epoxy-vloer-coating", "epoxy-vloer", "epoxy-gietvloer", "epoxy-coating-garage",
-  "garagevloer-epoxy-coating", "epoxy-vloer-garage", "epoxy-coating-beton",
-  "betoncoating-epoxy", "betonvloer-coaten", "epoxy-coating-badkamer",
-  "badkamervloer-epoxy", "waterdichte-vloer-badkamer", "epoxy-douchevloer",
-  "epoxy-coating-buiten", "buitenvloer-epoxy", "terras-epoxy-coating",
-  "oprit-epoxy", "uv-bestendige-coating", "industriële-epoxy-coating",
-  "industriële-vloercoating", "magazijn-vloer-epoxy", "werkplaats-vloer-coating",
-  "esd-vloer-epoxy", "epoxy-coating-prijs", "epoxy-coating-kosten",
-  "epoxy-vloer-offerte",
-  "metallic-epoxy-vloer", "metallic-epoxyvloer", "metallic-vloer-epoxy",
-  "glanzende-epoxy-vloer", "metallic-gietvloer", "gietvloer-metallic", "metallic-gietvloer-prijs",
-  "metallic-epoxy-prijs", "metallic-epoxy-vloer-prijs-per-m2", "metallic-epoxy-kosten",
-  "metallic-gietvloer-prijs-per-m2", "metallic-epoxy-offerte", "metallic-epoxy-pigment",
-  "metallic-pigmentpoeder-epoxy", "mica-pigment-epoxy", "epoxy-metallic-poeder",
-  "metallic-kleurpigment-epoxy", "metallic-epoxy-vloer-leggen", "metallic-epoxy-woonkamer",
-  "metallic-vloer-woonkamer", "metallic-epoxy-interieur", "metallic-gietvloer-woning",
-  "metallic-epoxy-kleuren", "metallic-epoxy-goud", "metallic-epoxy-zilver",
-  "metallic-epoxy-koper", "metallic-epoxy-brons", "metallic-epoxy-grijs",
-  "metallic-epoxy-antraciet", "metallic-epoxy-marmerlook", "epoxy-marmereffect-vloer",
-  "marmer-vloer-epoxy", "epoxy-vloer-marmer-uitstraling", "metallic-epoxy-garage",
-  "metallic-garagevloer-epoxy", "metallic-epoxy-antislip-garage", "metallic-epoxy-showroom",
-  "metallic-vloer-winkel", "metallic-epoxy-kantoor", "metallic-vloer-horeca",
-  "metallic-epoxy-hotel", "metallic-epoxy-vloer-onderhoud", "metallic-epoxy-vloer-schoonmaken",
-  "metallic-epoxy-krasbestendig", "metallic-epoxy-vloer-voordelen", "metallic-epoxy-vloer-uitharden",
-  "metallic-epoxy-woonkamer", "metallic-epoxy-badkamer", "metallic-epoxy-met-glitter",
-  "metallic-epoxy-dieptewerking-effect", "metallic-epoxy-lichtspel-vloer", "metallic-epoxy-vloer-industrieel",
-  "metallic-epoxy-effect-uitleg",
-  "flake-epoxy-vloer", "epoxy-vloer-flakes", "flakes-epoxy-vloer", "flakesvloer", "flakes-vloer", "flake-vloer-epoxy", "epoxy-flakesvloer", "chipsvloer", "chips-vloer-epoxy", "epoxy-chipsvloer", "chipsvloer-prijs", "vlokkenvloer", "epoxy-vlokken", "vloer-met-vlokken", "epoxy-met-vlokken", "kleurvlokken-epoxy", "kleurchips-epoxy", "kleurvlokken-gietvloer", "vinyl-flakes-epoxy", "flake-epoxy-garage", "chipsvloer-garage", "vlokkenvloer-garage", "epoxy-flakes-garagevloer", "flake-epoxy-prijs", "flakesvloer-prijs-per-m2", "chipsvloer-kosten", "vlokkenvloer-prijs", "flake-epoxy-kleuren", "epoxy-vlokken-kleuren", "kleurvlokken-mixen", "gietvloer-met-vlokken", "gietvloer-flakes", "gietvloer-kleurvlokken", "gietvloer-vlokken-instrooien", "flake-epoxy-showroom", "chipsvloer-winkel", "flakesvloer-kantoor", "flakes-vloer-horeca", "epoxy-vloer-flakes-antislip", "flake-epoxy-full-broadcast", "kleurvlokken-goud-zilver-epoxy", "vinyl-flakes-epoxy-vloer", "epoxy-vloer-met-vlokken-camouflage", "gietvloer-met-kleurvlokken-kosten", "epoxy-vlokken-grijs-beige", "flakesvloer-onderhoud", "chipsvloer-schoonmaken", "epoxy-vlokken-bandsporen-garage", "flake-epoxy-woonkamer", "flake-epoxy-entree", "flake-epoxy-magazijn", "flake-epoxy-terrazzo-look", "epoxy-vlokken-terrazzolook", "flake-epoxy-sealer-topcoat"
-];
+const { title, description, schemaType } = getSlugSeo(slug);
 
 if (keywordSlugs.includes(slug)) {
   componentType = 'keyword';
-  title = `${slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} - Epoxy Vloeren`;
 } else if (slug === "epoxy-coating" || slug === "metallic-epoxy" || slug === "flake-epoxy") {
   componentType = 'service';
-  title = `${slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} - Epoxy Vloeren`;
 } else if (slug.startsWith("metallic-epoxy-vloer-")) {
   componentType = 'metallic-city';
-  title = `Metallic Epoxy Vloer ${slug.replace('metallic-epoxy-vloer-', '').replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} - Epoxy Vloeren`;
 } else if (slug.startsWith("flake-epoxy-vloer-")) {
   componentType = 'flake-city';
-  title = `Flake Epoxy Vloer ${slug.replace('flake-epoxy-vloer-', '').replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} - Epoxy Vloeren`;
 } else if (slug.startsWith("epoxy-coating-vloer-")) {
   componentType = 'coating-city';
-  title = `Epoxy Coating Vloer ${slug.replace('epoxy-coating-vloer-', '').replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} - Epoxy Vloeren`;
 } else if (slug.startsWith("epoxy-vloer-")) {
   componentType = 'city';
-  title = `Epoxy Vloer ${slug.replace('epoxy-vloer-', '').replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} - Epoxy Vloeren`;
 } else {
-  // Fallback to home page
   return Astro.redirect('/');
 }
 ---
 
-<BaseLayout {title} {description}>
-  {componentType === 'keyword' && <KeywordLandingPage slug={slug} client:load />}
-  {componentType === 'service' && <ServicePage slug={slug} client:load />}
-  {componentType === 'metallic-city' && <MetallicCityLandingPage slug={slug} client:load />}
-  {componentType === 'flake-city' && <FlakeCityLandingPage slug={slug} client:load />}
-  {componentType === 'coating-city' && <CoatingCityLandingPage slug={slug} client:load />}
-  {componentType === 'city' && <CityLandingPage slug={slug} client:load />}
+<BaseLayout {title} {description} {schemaType}>
+  {componentType === 'keyword' && <KeywordLandingPage slug={slug} />}
+  {componentType === 'service' && <ServicePage slug={slug} />}
+  {componentType === 'metallic-city' && <MetallicCityLandingPage slug={slug} />}
+  {componentType === 'flake-city' && <FlakeCityLandingPage slug={slug} />}
+  {componentType === 'coating-city' && <CoatingCityLandingPage slug={slug} />}
+  {componentType === 'city' && <CityLandingPage slug={slug} />}
 </BaseLayout>

@@ -8,9 +8,9 @@ import CTA from '../components/CTA';
 
 <BaseLayout title="Portfolio - Epoxy Vloeren" description="Bekijk ons portfolio van professionele epoxy vloeren. Van metallic effecten tot flake vloeren in garages, woonkamers en bedrijven.">
   <div class="min-h-screen selection:bg-epoxy-accent selection:text-epoxy-black">
-    <Navbar client:load />
+    <Navbar />
     <main class="pt-20">
-      <Portfolio client:load />
+      <Portfolio />
 
       <section class="py-24 bg-epoxy-black text-white">
         <div class="max-w-4xl mx-auto px-6">
@@ -36,8 +36,8 @@ import CTA from '../components/CTA';
         </div>
       </section>
 
-      <CTA client:load />
+      <CTA />
     </main>
-    <Footer client:load />
+    <Footer />
   </div>
 </BaseLayout>

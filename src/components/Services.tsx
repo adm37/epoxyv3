@@ -64,10 +64,6 @@ export default function Services() {
           {services.map((service, i) => (
             <motion.div
               key={service.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.1 }}
-              viewport={{ once: true }}
               className="group relative overflow-hidden glass-card-light p-10 hover:border-epoxy-accent/50 transition-all duration-500"
             >
               {service.popular && (
