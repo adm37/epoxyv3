@@ -212,7 +212,7 @@ export default function MetallicCityLandingPage({ slug = "" }: Props) {
                 { q: `Is een metallic epoxy vloer duurder dan een gewone gietvloer?`, a: `Ja, vanwege de extra arbeidsintensieve technieken en de kostbare metallic pigmenten ligt de prijs per m2 in ${cityName} iets hoger dan bij een standaard epoxyvloer. Echter, de unieke uitstraling is voor veel klanten de investering meer dan waard.` },
                 { q: `Kan ik zelf de patronen bepalen?`, a: `U kunt de kleuren en de algemene 'vibe' (bijvoorbeeld druk of rustig) bepalen. Omdat het een handmatig proces is, kunnen we in ${cityName} nooit een exact patroon kopiëren, maar we kunnen wel heel dicht bij uw referentiebeelden komen.` },
                 { q: `Is de vloer koud aan de voeten?`, a: `Epoxy neemt de temperatuur van de omgeving aan. In een goed geïsoleerd huis in ${cityName} voelt de vloer niet koud aan. In combinatie met vloerverwarming is het zelfs een van de meest comfortabele vloeren die er zijn.` },
-                { q: `Hoe zit het met de garantie in ${cityName}?`, a: `Wij bieden een standaard garantie van 15 jaar op de hechting en de kleurvastheid van onze metallic vloeren in ${cityName}. Wij staan achter ons vakmanschap en de kwaliteit van onze materialen.` }
+                { q: `Hoe zit het met de garantie in ${cityName}?`, a: `Wij bieden een standaard garantie van 1 jaar op de hechting en de kleurvastheid van onze metallic vloeren in ${cityName}. Wij staan achter ons vakmanschap en de kwaliteit van onze materialen.` }
               ].map((item, i) => (
                 <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-black/5">
                   <h3 className="font-bold text-lg mb-3 uppercase tracking-tight">{item.q}</h3>

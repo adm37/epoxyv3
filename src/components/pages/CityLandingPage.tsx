@@ -81,7 +81,7 @@ export default function CityLandingPage({ slug = "" }: Props) {
                 <h3 className="text-3xl font-bold text-black uppercase tracking-tight mb-8">Waarom kiezen voor Klasse Epoxy in {cityName}?</h3>
                 <p>
                   Als lokale specialist in de regio {cityName} begrijpen wij de specifieke behoeften van onze klanten. Wij werken uitsluitend met 
-                  de hoogste kwaliteit harsen en pigmenten, waardoor we een garantie van 15 jaar kunnen bieden op de kleurvastheid en structurele 
+                  de hoogste kwaliteit harsen en pigmenten, waardoor we een garantie van 1 jaar kunnen bieden op de kleurvastheid en structurele 
                   integriteit van uw vloer. Onze vakmensen hebben jarenlange ervaring met het leggen van gietvloeren in diverse omstandigheden, 
                   van monumentale panden met uitdagende ondervloeren tot grootschalige industriële hallen.
                 </p>
