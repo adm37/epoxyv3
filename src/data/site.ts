@@ -1,6 +1,6 @@
 import { faqs } from './faqs';
 
-export const SITE_URL = (process.env.SITE_URL || 'https://klassepoxy.nl').replace(/\/$/, '');
+export const SITE_URL = (process.env.SITE_URL || 'https://klasseepoxy.nl').replace(/\/$/, '');
 export const SITE_NAME = 'Klasse Epoxy';
 export const DEFAULT_TITLE = 'Epoxy Vloeren | Klasse Epoxy';
 export const DEFAULT_DESCRIPTION =
