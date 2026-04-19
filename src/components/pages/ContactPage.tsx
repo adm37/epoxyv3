@@ -8,7 +8,7 @@ export default function ContactPage() {
     <div className="min-h-screen selection:bg-epoxy-accent selection:text-epoxy-black bg-white">
       <Navbar />
       
-      <main className="pt-32 pb-32">
+      <main className="pt-32">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-20">
             <span className="section-subtitle">Contact</span>
@@ -36,7 +36,9 @@ export default function ContactPage() {
         </div>
       </main>
 
-      <CTA />
+      <div className="mt-20">
+        <CTA />
+      </div>
       <Footer />
     </div>
   );
