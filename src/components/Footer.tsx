@@ -27,7 +27,7 @@ export default function Footer() {
             </p>
             <div className="space-y-2 text-[10px] font-bold uppercase tracking-widest text-white/40">
               <div>Heiligeweg 105B, Krommenie</div>
-              <div>+31 (0) 20 123 4567</div>
+              <div>0752340037</div>
             </div>
           </div>
           
@@ -55,7 +55,7 @@ export default function Footer() {
               <ul className="space-y-3 text-[10px] font-bold text-white uppercase tracking-widest">
                 <li><a href="/contact/" className="hover:text-epoxy-accent transition-colors">Contactpagina</a></li>
                 <li><a href="mailto:info@klasseepoxy.nl" className="hover:text-epoxy-accent transition-colors normal-case tracking-normal">info@klasseepoxy.nl</a></li>
-                <li><a href="tel:+31201234567" className="hover:text-epoxy-accent transition-colors">+31 (0) 20 123 4567</a></li>
+                <li><a href="tel:0752340037" className="hover:text-epoxy-accent transition-colors">0752340037</a></li>
               </ul>
               <div className="mt-6 flex gap-4" aria-label="Social placeholders verborgen voor SEO totdat echte profielen zijn toegevoegd">
                 <span className="w-10 h-10 rounded-full glass-card flex items-center justify-center text-white/30"><Instagram className="w-4 h-4" /></span>

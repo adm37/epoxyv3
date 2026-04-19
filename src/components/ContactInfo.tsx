@@ -5,7 +5,7 @@ export default function ContactInfo() {
     {
       icon: Phone,
       label: "Bel ons",
-      value: "+31 (0) 20 123 4567",
+      value: "0752340037",
       description: "Maandag t/m Vrijdag, 09:00 - 18:00"
     },
     {

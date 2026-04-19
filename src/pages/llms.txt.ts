@@ -16,7 +16,7 @@ ${entries
 - Specialisaties: epoxy coating, metallic epoxy, flake epoxy, gietvloeren en industriële vloercoating
 - Werkgebied: heel Nederland
 - Vestigingsplaats: Krommenie
-- Contact: info@klasseepoxy.nl | +31 (0) 20 123 4567
+- Contact: info@klasseepoxy.nl | 0752340037
 `;
 
   return new Response(body, {

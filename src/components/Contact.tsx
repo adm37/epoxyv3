@@ -24,7 +24,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="text-[10px] font-bold uppercase tracking-widest opacity-40 mb-1">Bel ons</div>
-                    <div className="text-xl font-display font-bold text-epoxy-black">+31 (0) 20 123 4567</div>
+                    <div className="text-xl font-display font-bold text-epoxy-black">0752340037</div>
                   </div>
                 </div>
                 

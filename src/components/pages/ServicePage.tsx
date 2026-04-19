@@ -192,7 +192,7 @@ export default function ServicePage({ slug = "epoxy-coating" }: Props) {
               <a href="#contact" className="bg-black text-white px-12 py-5 font-bold uppercase tracking-tighter hover:scale-105 transition-transform">
                 Offerte Aanvragen
               </a>
-              <a href="tel:+31201234567" className="border-2 border-black px-12 py-5 font-bold uppercase tracking-tighter hover:bg-black hover:text-white transition-all">
+              <a href="tel:0752340037" className="border-2 border-black px-12 py-5 font-bold uppercase tracking-tighter hover:bg-black hover:text-white transition-all">
                 Bel Direct
               </a>
             </div>

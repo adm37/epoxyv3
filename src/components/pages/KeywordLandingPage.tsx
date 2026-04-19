@@ -446,8 +446,8 @@ export default function KeywordLandingPage({ slug = "" }: Props) {
               <a href="#contact" className="bg-black text-white px-12 py-5 font-bold uppercase tracking-tighter hover:scale-105 transition-transform text-center">
                 Offerte Aanvragen
               </a>
-              <a href="tel:+31201234567" className="border-2 border-black px-12 py-5 font-bold uppercase tracking-tighter hover:bg-black hover:text-white transition-all text-center">
-                Bel direct: 020 123 4567
+              <a href="tel:0752340037" className="border-2 border-black px-12 py-5 font-bold uppercase tracking-tighter hover:bg-black hover:text-white transition-all text-center">
+                Bel direct: 0752340037
               </a>
             </div>
           </div>
