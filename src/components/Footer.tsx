@@ -34,23 +34,23 @@ export default function Footer() {
               <h4 className="text-[10px] font-bold uppercase tracking-widest text-white/40 mb-6">Navigatie</h4>
               <ul className="space-y-3 text-[10px] font-bold text-white uppercase tracking-widest">
                 <li><a href="/" className="hover:text-epoxy-accent transition-colors">Home</a></li>
-                <li><a href="/werkwijze" className="hover:text-epoxy-accent transition-colors">Werkwijze</a></li>
-                <li><a href="/portfolio" className="hover:text-epoxy-accent transition-colors">Portfolio</a></li>
-                <li><a href="/faq" className="hover:text-epoxy-accent transition-colors">FAQ</a></li>
+                <li><a href="/werkwijze/" className="hover:text-epoxy-accent transition-colors">Werkwijze</a></li>
+                <li><a href="/portfolio/" className="hover:text-epoxy-accent transition-colors">Portfolio</a></li>
+                <li><a href="/faq/" className="hover:text-epoxy-accent transition-colors">FAQ</a></li>
               </ul>
             </div>
             <div>
               <h4 className="text-[10px] font-bold uppercase tracking-widest text-white/40 mb-6">Diensten</h4>
               <ul className="space-y-3 text-[10px] font-bold text-white uppercase tracking-widest">
-                <li><a href="/epoxy-coating" className="hover:text-epoxy-accent transition-colors">Epoxy Coating</a></li>
-                <li><a href="/metallic-epoxy" className="hover:text-epoxy-accent transition-colors">Metallic Epoxy</a></li>
-                <li><a href="/flake-epoxy" className="hover:text-epoxy-accent transition-colors">Flake Epoxy</a></li>
+                <li><a href="/epoxy-coating/" className="hover:text-epoxy-accent transition-colors">Epoxy Coating</a></li>
+                <li><a href="/metallic-epoxy/" className="hover:text-epoxy-accent transition-colors">Metallic Epoxy</a></li>
+                <li><a href="/flake-epoxy/" className="hover:text-epoxy-accent transition-colors">Flake Epoxy</a></li>
               </ul>
             </div>
             <div>
               <h4 className="text-[10px] font-bold uppercase tracking-widest text-white/40 mb-6">Contact</h4>
               <ul className="space-y-3 text-[10px] font-bold text-white uppercase tracking-widest">
-                <li><a href="/contact" className="hover:text-epoxy-accent transition-colors">Contactpagina</a></li>
+                <li><a href="/contact/" className="hover:text-epoxy-accent transition-colors">Contactpagina</a></li>
                 <li><a href="mailto:info@klasseepoxy.nl" className="hover:text-epoxy-accent transition-colors normal-case tracking-normal">info@klasseepoxy.nl</a></li>
                 <li><a href="tel:+31201234567" className="hover:text-epoxy-accent transition-colors">+31 (0) 20 123 4567</a></li>
               </ul>
@@ -79,8 +79,8 @@ export default function Footer() {
         <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between gap-4 text-[8px] font-bold uppercase tracking-[0.4em] text-white/20">
           <div>© 2026 Klasse Epoxy. Alle rechten voorbehouden.</div>
           <div className="flex gap-8">
-            <a href="/privacy" className="hover:text-epoxy-accent transition-colors">Privacy</a>
-            <a href="/algemene-voorwaarden" className="hover:text-epoxy-accent transition-colors">Algemene voorwaarden</a>
+            <a href="/privacy/" className="hover:text-epoxy-accent transition-colors">Privacy</a>
+            <a href="/algemene-voorwaarden/" className="hover:text-epoxy-accent transition-colors">Algemene voorwaarden</a>
           </div>
         </div>
       </div>

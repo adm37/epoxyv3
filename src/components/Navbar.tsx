@@ -3,11 +3,11 @@ import { Menu, X, PaintRoller } from "lucide-react";
 export default function Navbar() {
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "Diensten", href: "/diensten" },
-    { name: "Werkwijze", href: "/werkwijze" },
-    { name: "Portfolio", href: "/portfolio" },
-    { name: "FAQ", href: "/faq" },
-    { name: "Contact", href: "/contact" },
+    { name: "Diensten", href: "/diensten/" },
+    { name: "Werkwijze", href: "/werkwijze/" },
+    { name: "Portfolio", href: "/portfolio/" },
+    { name: "FAQ", href: "/faq/" },
+    { name: "Contact", href: "/contact/" },
   ];
 
   return (
@@ -35,7 +35,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="/offerte"
+            href="/offerte/"
             className="bg-white text-black px-6 py-2 text-xs font-bold uppercase tracking-tighter hover:bg-epoxy-accent transition-colors"
           >
             Offerte
@@ -59,7 +59,7 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="/offerte"
+              href="/offerte/"
               className="bg-white text-black w-full py-4 font-bold uppercase tracking-tighter text-center"
             >
               Offerte Aanvragen

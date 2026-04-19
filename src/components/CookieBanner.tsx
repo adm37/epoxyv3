@@ -54,7 +54,7 @@ export default function CookieBanner() {
                 <p className="text-sm text-epoxy-black/60 leading-relaxed mb-6">
                   Wij gebruiken cookies om uw ervaring op onze website te verbeteren en het verkeer te analyseren. 
                   Door op "Accepteren" te klikken, gaat u akkoord met ons gebruik van cookies. Lees meer in onze{" "}
-                  <a href="/privacy" className="text-epoxy-black font-bold underline decoration-epoxy-accent underline-offset-4">
+                  <a href="/privacy/" className="text-epoxy-black font-bold underline decoration-epoxy-accent underline-offset-4">
                     Privacyverklaring
                   </a>.
                 </p>

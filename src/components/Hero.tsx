@@ -39,11 +39,11 @@ export default function Hero() {
         <motion.div
           className="flex flex-col md:flex-row items-center justify-center gap-6"
         >
-          <a href="/portfolio" className="btn-dark flex items-center gap-3">
+          <a href="/portfolio/" className="btn-dark flex items-center gap-3">
             Bekijk Onze Projecten
             <ArrowRight className="w-5 h-5" />
           </a>
-          <a href="/offerte" className="btn-dark flex items-center gap-3">
+          <a href="/offerte/" className="btn-dark flex items-center gap-3">
             Offerte Aanvragen
             <ArrowRight className="w-5 h-5" />
           </a>

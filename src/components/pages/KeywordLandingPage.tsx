@@ -152,7 +152,7 @@ export default function KeywordLandingPage({ slug = "" }: Props) {
             </p>
             <div className="flex flex-col md:flex-row justify-center gap-6">
               <a href="#contact" className="btn-dark">Gratis Offerte Aanvragen</a>
-              <a href="/portfolio" className="text-white/40 hover:text-white transition-colors flex items-center gap-2 text-xs font-bold uppercase tracking-widest">
+              <a href="/portfolio/" className="text-white/40 hover:text-white transition-colors flex items-center gap-2 text-xs font-bold uppercase tracking-widest">
                 Bekijk Portfolio <ArrowRight className="w-4 h-4" />
               </a>
             </div>

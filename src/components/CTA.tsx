@@ -15,7 +15,7 @@ export default function CTA() {
         </div>
         <div>
           <a
-            href="/offerte"
+            href="/offerte/"
             className="bg-epoxy-black text-white px-12 py-6 font-black uppercase tracking-tighter text-xl flex items-center gap-4 hover:bg-white hover:text-black transition-colors"
           >
             START NU
