@@ -13,6 +13,7 @@ export default function Hero() {
           muted
           loop
           playsInline
+          preload="auto"
         >
           <source src="https://klasseepoxy.nl/klasse%20epoxy%20video.mp4" type="video/mp4" />
         </video>
