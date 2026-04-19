@@ -5,7 +5,7 @@ import path from 'path';
 
 // https://astro.build/config
 export default defineConfig({
-  site: process.env.SITE_URL ?? 'https://klasse-epoxy.nl',
+  site: process.env.SITE_URL ?? 'https://klassepoxy.nl',
   trailingSlash: 'never',
   integrations: [react()],
   vite: {
