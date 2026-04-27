@@ -3,7 +3,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CTA from '../components/CTA';
+import { cities, slugToTitle } from '../data/site';
 import { Sparkles, ArrowRight } from 'lucide-react';
+
+const cityEntries = cities.map((citySlug) => ({
+  slug: citySlug,
+  label: slugToTitle(citySlug),
+}));
 ---
 
 <BaseLayout title="Epoxy Vloer Diensten: Coating, Metallic & Flake | Klasse Epoxy" description="Ontdek alle epoxy vloerdiensten van Klasse Epoxy: epoxy coating, metallic epoxy en flake epoxy voor woningen, garages, showrooms en bedrijven in heel Nederland.">
@@ -113,6 +119,62 @@ import { Sparkles, ArrowRight } from 'lucide-react';
                   Lees Meer <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
                 </div>
               </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* City Link Hub: extra interne links voor city-varianten */}
+      <section class="py-24 bg-gray-50 border-y border-black/5">
+        <div class="max-w-7xl mx-auto px-6">
+          <h2 class="text-3xl font-display font-black text-epoxy-black mb-4 uppercase tracking-tighter">
+            Diensten Per Stad
+          </h2>
+          <p class="text-epoxy-black/60 mb-12 max-w-3xl">
+            Bekijk onze dienstspecifieke landingspagina&apos;s per stad voor metallic epoxy, flake epoxy en epoxy coating.
+          </p>
+
+          <div class="space-y-12">
+            <div>
+              <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-epoxy-black/50 mb-5">Metallic Epoxy Per Stad</h3>
+              <div class="flex flex-wrap gap-3">
+                {cityEntries.map((city) => (
+                  <a
+                    href={`/metallic-epoxy-vloer-${city.slug}/`}
+                    class="px-4 py-2 text-[10px] font-bold uppercase tracking-widest bg-white border border-black/10 rounded-full hover:border-epoxy-accent hover:text-epoxy-accent transition-colors"
+                  >
+                    Metallic Epoxy {city.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-epoxy-black/50 mb-5">Flake Epoxy Per Stad</h3>
+              <div class="flex flex-wrap gap-3">
+                {cityEntries.map((city) => (
+                  <a
+                    href={`/flake-epoxy-vloer-${city.slug}/`}
+                    class="px-4 py-2 text-[10px] font-bold uppercase tracking-widest bg-white border border-black/10 rounded-full hover:border-epoxy-accent hover:text-epoxy-accent transition-colors"
+                  >
+                    Flake Epoxy {city.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-xs font-bold uppercase tracking-[0.2em] text-epoxy-black/50 mb-5">Epoxy Coating Per Stad</h3>
+              <div class="flex flex-wrap gap-3">
+                {cityEntries.map((city) => (
+                  <a
+                    href={`/epoxy-coating-vloer-${city.slug}/`}
+                    class="px-4 py-2 text-[10px] font-bold uppercase tracking-widest bg-white border border-black/10 rounded-full hover:border-epoxy-accent hover:text-epoxy-accent transition-colors"
+                  >
+                    Epoxy Coating {city.label}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         </div>
