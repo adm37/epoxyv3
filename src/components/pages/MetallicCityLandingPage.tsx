@@ -223,6 +223,51 @@ export default function MetallicCityLandingPage({ slug = "" }: Props) {
           </div>
         </section>
 
+        {/* Meer Diensten Section */}
+        <section className="py-24 bg-white">
+          <div className="max-w-7xl mx-auto px-6">
+            <h2 className="text-3xl font-display font-black tracking-tighter mb-4 uppercase">
+              Meer Epoxy Vloeren in {cityName}
+            </h2>
+            <p className="text-black/50 mb-12 max-w-2xl">
+              Ontdek ook onze andere epoxy vloeroplossingen in {cityName}.
+            </p>
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <a href={`/epoxy-vloer-${citySlug}/`} className="group block bg-gray-50 p-8 rounded-2xl border border-black/5 hover:border-epoxy-accent/30 hover:bg-epoxy-accent/5 transition-all">
+                <h3 className="font-bold uppercase text-lg mb-2 group-hover:text-epoxy-accent transition-colors">Epoxy Vloer {cityName}</h3>
+                <p className="text-black/50 text-sm">Klassieke naadloze epoxy gietvloer voor woningen en bedrijven in {cityName}.</p>
+              </a>
+              <a href={`/flake-epoxy-vloer-${citySlug}/`} className="group block bg-gray-50 p-8 rounded-2xl border border-black/5 hover:border-epoxy-accent/30 hover:bg-epoxy-accent/5 transition-all">
+                <h3 className="font-bold uppercase text-lg mb-2 group-hover:text-epoxy-accent transition-colors">Flake Epoxy {cityName}</h3>
+                <p className="text-black/50 text-sm">Decoratieve flake epoxy vloer met kleurvlokken en uitstekende antislip voor {cityName}.</p>
+              </a>
+            </div>
+            <div className="border-t border-black/5 pt-12">
+              <h3 className="text-sm font-bold uppercase tracking-widest text-black/40 mb-6">Meer over Metallic Epoxy</h3>
+              <div className="flex flex-wrap gap-3">
+                {[
+                  { href: "/metallic-epoxy/", label: "Metallic Epoxy" },
+                  { href: "/metallic-epoxy-vloer/", label: "Metallic Epoxy Vloer" },
+                  { href: "/metallic-gietvloer/", label: "Metallic Gietvloer" },
+                  { href: "/metallic-epoxy-prijs/", label: "Metallic Epoxy Prijs" },
+                  { href: "/metallic-epoxy-kleuren/", label: "Metallic Epoxy Kleuren" },
+                  { href: "/metallic-epoxy-woonkamer/", label: "Metallic Epoxy Woonkamer" },
+                  { href: "/metallic-epoxy-garage/", label: "Metallic Epoxy Garage" },
+                  { href: "/metallic-epoxy-offerte/", label: "Metallic Epoxy Offerte" },
+                ].map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    className="px-4 py-2 text-xs font-bold uppercase tracking-wider border border-black/10 rounded-full hover:border-epoxy-accent hover:text-epoxy-accent transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Final CTA */}
         <section className="py-24 bg-epoxy-accent text-epoxy-black">
           <div className="max-w-7xl mx-auto px-6 text-center">

@@ -117,6 +117,111 @@ const getCategoryContent = (category: string, keyword: string) => {
   }
 };
 
+const getRelatedLinks = (category: string, currentSlug: string) => {
+  const allLinks: Record<string, Array<{href: string; label: string}>> = {
+    METALLIC: [
+      { href: "/metallic-epoxy/", label: "Metallic Epoxy" },
+      { href: "/metallic-epoxy-vloer/", label: "Metallic Epoxy Vloer" },
+      { href: "/metallic-gietvloer/", label: "Metallic Gietvloer" },
+      { href: "/metallic-epoxy-prijs/", label: "Metallic Epoxy Prijs" },
+      { href: "/metallic-epoxy-kosten/", label: "Metallic Epoxy Kosten" },
+      { href: "/metallic-epoxy-kleuren/", label: "Metallic Epoxy Kleuren" },
+      { href: "/metallic-epoxy-woonkamer/", label: "Metallic Epoxy Woonkamer" },
+      { href: "/metallic-epoxy-garage/", label: "Metallic Epoxy Garage" },
+      { href: "/metallic-epoxy-badkamer/", label: "Metallic Epoxy Badkamer" },
+      { href: "/metallic-epoxy-showroom/", label: "Metallic Epoxy Showroom" },
+      { href: "/metallic-epoxy-offerte/", label: "Metallic Epoxy Offerte" },
+    ],
+    FLAKE: [
+      { href: "/flake-epoxy/", label: "Flake Epoxy" },
+      { href: "/flakesvloer/", label: "Flakesvloer" },
+      { href: "/vlokkenvloer/", label: "Vlokkenvloer" },
+      { href: "/chipsvloer/", label: "Chipsvloer" },
+      { href: "/epoxy-vlokken/", label: "Epoxy Vlokken" },
+      { href: "/epoxy-vloer-flakes/", label: "Epoxy Vloer Flakes" },
+      { href: "/flake-epoxy-prijs/", label: "Flake Epoxy Prijs" },
+      { href: "/chipsvloer-kosten/", label: "Chipsvloer Kosten" },
+      { href: "/flake-epoxy-kleuren/", label: "Flake Epoxy Kleuren" },
+      { href: "/kleurvlokken-epoxy/", label: "Kleurvlokken Epoxy" },
+      { href: "/vinyl-flakes-epoxy/", label: "Vinyl Flakes Epoxy" },
+    ],
+    GARAGE: [
+      { href: "/epoxy-coating/", label: "Epoxy Coating" },
+      { href: "/epoxy-vloer-garage/", label: "Epoxy Vloer Garage" },
+      { href: "/garagevloer-epoxy-coating/", label: "Garagevloer Epoxy Coating" },
+      { href: "/epoxy-coating-garage/", label: "Epoxy Coating Garage" },
+      { href: "/chipsvloer-garage/", label: "Chipsvloer Garage" },
+      { href: "/metallic-epoxy-garage/", label: "Metallic Epoxy Garage" },
+      { href: "/flake-epoxy-garage/", label: "Flake Epoxy Garage" },
+      { href: "/epoxy-flakes-garagevloer/", label: "Epoxy Flakes Garagevloer" },
+      { href: "/vlokkenvloer-garage/", label: "Vlokkenvloer Garage" },
+    ],
+    BATHROOM: [
+      { href: "/epoxy-coating/", label: "Epoxy Coating" },
+      { href: "/epoxy-coating-badkamer/", label: "Epoxy Coating Badkamer" },
+      { href: "/badkamervloer-epoxy/", label: "Badkamervloer Epoxy" },
+      { href: "/epoxy-douchevloer/", label: "Epoxy Douchevloer" },
+      { href: "/waterdichte-vloer-badkamer/", label: "Waterdichte Vloer Badkamer" },
+      { href: "/metallic-epoxy-badkamer/", label: "Metallic Epoxy Badkamer" },
+    ],
+    OUTDOOR: [
+      { href: "/epoxy-coating/", label: "Epoxy Coating" },
+      { href: "/epoxy-coating-buiten/", label: "Epoxy Coating Buiten" },
+      { href: "/buitenvloer-epoxy/", label: "Buitenvloer Epoxy" },
+      { href: "/terras-epoxy-coating/", label: "Terras Epoxy Coating" },
+      { href: "/oprit-epoxy/", label: "Oprit Epoxy" },
+      { href: "/uv-bestendige-coating/", label: "UV Bestendige Coating" },
+    ],
+    INDUSTRIAL: [
+      { href: "/epoxy-coating/", label: "Epoxy Coating" },
+      { href: "/industriële-epoxy-coating/", label: "Industriële Epoxy Coating" },
+      { href: "/industriële-vloercoating/", label: "Industriële Vloercoating" },
+      { href: "/magazijn-vloer-epoxy/", label: "Magazijn Vloer Epoxy" },
+      { href: "/werkplaats-vloer-coating/", label: "Werkplaats Vloer Coating" },
+      { href: "/esd-vloer-epoxy/", label: "ESD Vloer Epoxy" },
+    ],
+    PRICE: [
+      { href: "/epoxy-coating-kosten/", label: "Epoxy Coating Kosten" },
+      { href: "/epoxy-coating-prijs/", label: "Epoxy Coating Prijs" },
+      { href: "/metallic-epoxy-prijs/", label: "Metallic Epoxy Prijs" },
+      { href: "/metallic-epoxy-kosten/", label: "Metallic Epoxy Kosten" },
+      { href: "/flake-epoxy-prijs/", label: "Flake Epoxy Prijs" },
+      { href: "/chipsvloer-kosten/", label: "Chipsvloer Kosten" },
+      { href: "/vlokkenvloer-prijs/", label: "Vlokkenvloer Prijs" },
+      { href: "/metallic-gietvloer-prijs/", label: "Metallic Gietvloer Prijs" },
+      { href: "/flakesvloer-prijs-per-m2/", label: "Flakesvloer Prijs Per M2" },
+    ],
+    OFFERTE: [
+      { href: "/offerte/", label: "Offerte Aanvragen" },
+      { href: "/epoxy-vloer-offerte/", label: "Epoxy Vloer Offerte" },
+      { href: "/metallic-epoxy-offerte/", label: "Metallic Epoxy Offerte" },
+      { href: "/epoxy-coating-prijs/", label: "Epoxy Coating Prijs" },
+      { href: "/metallic-epoxy-prijs/", label: "Metallic Epoxy Prijs" },
+      { href: "/flake-epoxy-prijs/", label: "Flake Epoxy Prijs" },
+    ],
+    BETON: [
+      { href: "/epoxy-coating/", label: "Epoxy Coating" },
+      { href: "/epoxy-coating-beton/", label: "Epoxy Coating Beton" },
+      { href: "/betoncoating-epoxy/", label: "Betoncoating Epoxy" },
+      { href: "/betonvloer-coaten/", label: "Betonvloer Coaten" },
+      { href: "/epoxy-vloer-coating/", label: "Epoxy Vloer Coating" },
+      { href: "/industriële-vloercoating/", label: "Industriële Vloercoating" },
+    ],
+    GENERAL: [
+      { href: "/epoxy-coating/", label: "Epoxy Coating" },
+      { href: "/epoxy-vloer/", label: "Epoxy Vloer" },
+      { href: "/epoxy-gietvloer/", label: "Epoxy Gietvloer" },
+      { href: "/epoxy-vloer-coating/", label: "Epoxy Vloer Coating" },
+      { href: "/glanzende-epoxy-vloer/", label: "Glanzende Epoxy Vloer" },
+      { href: "/epoxy-coating-prijs/", label: "Epoxy Coating Prijs" },
+      { href: "/metallic-epoxy-vloer/", label: "Metallic Epoxy Vloer" },
+      { href: "/flakesvloer/", label: "Flakesvloer" },
+    ],
+  };
+  const links = allLinks[category] || allLinks.GENERAL;
+  return links.filter((link) => link.href !== `/${currentSlug}/`);
+};
+
 interface Props { slug?: string; }
 export default function KeywordLandingPage({ slug = "" }: Props) {
   const keyword = formatTitle(slug);
@@ -430,6 +535,29 @@ export default function KeywordLandingPage({ slug = "" }: Props) {
                   Wilt u meer weten over de mogelijkheden van {keyword}? Neem vandaag nog contact met ons op voor een adviesgesprek op locatie of een vrijblijvende offerte. Onze experts staan klaar om van uw vloer een Klasse Epoxy vloer te maken.
                 </p>
               </section>
+            </div>
+          </div>
+        </section>
+
+        {/* Related Pages Section */}
+        <section className="py-16 bg-gray-50">
+          <div className="max-w-7xl mx-auto px-6">
+            <h2 className="text-2xl font-display font-black tracking-tighter mb-4 uppercase">
+              Gerelateerde Epoxy Pagina's
+            </h2>
+            <p className="text-black/50 mb-8 text-sm max-w-2xl">
+              Bekijk ook onze andere pagina's over {keyword.toLowerCase()} en gerelateerde diensten.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              {getRelatedLinks(category, slug).map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="px-4 py-2 text-xs font-bold uppercase tracking-wider border border-black/10 rounded-full hover:border-epoxy-accent hover:text-epoxy-accent transition-colors bg-white"
+                >
+                  {link.label}
+                </a>
+              ))}
             </div>
           </div>
         </section>

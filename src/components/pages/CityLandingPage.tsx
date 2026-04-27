@@ -184,6 +184,77 @@ export default function CityLandingPage({ slug = "" }: Props) {
           </div>
         </section>
 
+        {/* Meer Diensten Section */}
+        <section className="py-24 bg-white">
+          <div className="max-w-7xl mx-auto px-6">
+            <h2 className="text-3xl font-display font-black tracking-tighter mb-4 uppercase">
+              Meer Epoxy Diensten in {cityName}
+            </h2>
+            <p className="text-black/50 mb-12 max-w-2xl">
+              Naast een standaard epoxy vloer bieden wij in {cityName} ook metallic designvloeren,
+              flake gietvloeren en industriële coatingoplossingen aan.
+            </p>
+            <div className="grid md:grid-cols-3 gap-8 mb-16">
+              <a href={`/metallic-epoxy-vloer-${citySlug}/`} className="group block bg-gray-50 p-8 rounded-2xl border border-black/5 hover:border-epoxy-accent/30 hover:bg-epoxy-accent/5 transition-all">
+                <h3 className="font-bold uppercase text-lg mb-2 group-hover:text-epoxy-accent transition-colors">Metallic Epoxy {cityName}</h3>
+                <p className="text-black/50 text-sm">Exclusieve designvloer met uniek diepte-effect voor uw interieur in {cityName}.</p>
+              </a>
+              <a href={`/flake-epoxy-vloer-${citySlug}/`} className="group block bg-gray-50 p-8 rounded-2xl border border-black/5 hover:border-epoxy-accent/30 hover:bg-epoxy-accent/5 transition-all">
+                <h3 className="font-bold uppercase text-lg mb-2 group-hover:text-epoxy-accent transition-colors">Flake Epoxy {cityName}</h3>
+                <p className="text-black/50 text-sm">Slijtvaste vloer met kleurvlokken. Antislip en decoratief, perfect voor garages in {cityName}.</p>
+              </a>
+              <a href={`/epoxy-coating-vloer-${citySlug}/`} className="group block bg-gray-50 p-8 rounded-2xl border border-black/5 hover:border-epoxy-accent/30 hover:bg-epoxy-accent/5 transition-all">
+                <h3 className="font-bold uppercase text-lg mb-2 group-hover:text-epoxy-accent transition-colors">Epoxy Coating {cityName}</h3>
+                <p className="text-black/50 text-sm">Sterke, vloeistofdichte coating tegen een scherpe prijs voor uw project in {cityName}.</p>
+              </a>
+            </div>
+            <div className="border-t border-black/5 pt-12">
+              <h3 className="text-sm font-bold uppercase tracking-widest text-black/40 mb-6">Populaire Steden</h3>
+              <div className="flex flex-wrap gap-3 mb-10">
+                {[
+                  { slug: "amsterdam", name: "Amsterdam" },
+                  { slug: "rotterdam", name: "Rotterdam" },
+                  { slug: "utrecht", name: "Utrecht" },
+                  { slug: "den-haag", name: "Den Haag" },
+                  { slug: "eindhoven", name: "Eindhoven" },
+                  { slug: "haarlem", name: "Haarlem" },
+                  { slug: "groningen", name: "Groningen" },
+                  { slug: "tilburg", name: "Tilburg" },
+                ].filter((c) => c.slug !== citySlug).slice(0, 6).map((c) => (
+                  <a
+                    key={c.slug}
+                    href={`/epoxy-vloer-${c.slug}/`}
+                    className="px-4 py-2 text-xs font-bold uppercase tracking-wider border border-black/10 rounded-full hover:border-epoxy-accent hover:text-epoxy-accent transition-colors"
+                  >
+                    Epoxy Vloer {c.name}
+                  </a>
+                ))}
+              </div>
+              <h3 className="text-sm font-bold uppercase tracking-widest text-black/40 mb-6">Gerelateerde Informatie</h3>
+              <div className="flex flex-wrap gap-3">
+                {[
+                  { href: "/epoxy-vloer/", label: "Epoxy Vloer" },
+                  { href: "/epoxy-gietvloer/", label: "Epoxy Gietvloer" },
+                  { href: "/metallic-epoxy-vloer/", label: "Metallic Epoxy Vloer" },
+                  { href: "/flakesvloer/", label: "Flakesvloer" },
+                  { href: "/vlokkenvloer/", label: "Vlokkenvloer" },
+                  { href: "/epoxy-coating-prijs/", label: "Epoxy Coating Prijs" },
+                  { href: "/metallic-epoxy-prijs/", label: "Metallic Epoxy Prijs" },
+                  { href: "/epoxy-vloer-offerte/", label: "Offerte Aanvragen" },
+                ].map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    className="px-4 py-2 text-xs font-bold uppercase tracking-wider border border-black/10 rounded-full hover:border-epoxy-accent hover:text-epoxy-accent transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Local CTA Section */}
         <section className="py-24 bg-epoxy-accent text-epoxy-black">
           <div className="max-w-7xl mx-auto px-6 text-center">

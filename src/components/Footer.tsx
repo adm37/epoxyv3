@@ -51,6 +51,21 @@ export default function Footer() {
               </ul>
             </div>
             <div>
+              <h4 className="text-[10px] font-bold uppercase tracking-widest text-white/40 mb-6">Steden</h4>
+              <ul className="space-y-3 text-[10px] font-bold text-white uppercase tracking-widest">
+                {cities.map((city) => (
+                  <li key={city}>
+                    <a
+                      href={`/epoxy-vloer-${city.toLowerCase().replace(/ /g, '-')}/`}
+                      className="hover:text-epoxy-accent transition-colors"
+                    >
+                      {city}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
               <h4 className="text-[10px] font-bold uppercase tracking-widest text-white/40 mb-6">Contact</h4>
               <ul className="space-y-3 text-[10px] font-bold text-white uppercase tracking-widest">
                 <li><a href="/contact/" className="hover:text-epoxy-accent transition-colors">Contactpagina</a></li>

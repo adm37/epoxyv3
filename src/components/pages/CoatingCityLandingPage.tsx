@@ -178,6 +178,51 @@ export default function CoatingCityLandingPage({ slug = "" }: Props) {
           </div>
         </section>
 
+        {/* Meer Diensten Section */}
+        <section className="py-24 bg-white">
+          <div className="max-w-7xl mx-auto px-6">
+            <h2 className="text-3xl font-display font-black tracking-tighter mb-4 uppercase">
+              Meer Epoxy Vloeren in {cityName}
+            </h2>
+            <p className="text-black/50 mb-12 max-w-2xl">
+              Ontdek ook onze andere epoxy vloeroplossingen in {cityName}.
+            </p>
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <a href={`/epoxy-vloer-${citySlug}/`} className="group block bg-gray-50 p-8 rounded-2xl border border-black/5 hover:border-epoxy-accent/30 hover:bg-epoxy-accent/5 transition-all">
+                <h3 className="font-bold uppercase text-lg mb-2 group-hover:text-epoxy-accent transition-colors">Epoxy Vloer {cityName}</h3>
+                <p className="text-black/50 text-sm">Professionele epoxy gietvloer voor uw woning of bedrijf in {cityName}.</p>
+              </a>
+              <a href={`/metallic-epoxy-vloer-${citySlug}/`} className="group block bg-gray-50 p-8 rounded-2xl border border-black/5 hover:border-epoxy-accent/30 hover:bg-epoxy-accent/5 transition-all">
+                <h3 className="font-bold uppercase text-lg mb-2 group-hover:text-epoxy-accent transition-colors">Metallic Epoxy {cityName}</h3>
+                <p className="text-black/50 text-sm">Luxe metallic designvloer met uniek diepte-effect voor uw pand in {cityName}.</p>
+              </a>
+            </div>
+            <div className="border-t border-black/5 pt-12">
+              <h3 className="text-sm font-bold uppercase tracking-widest text-black/40 mb-6">Meer over Epoxy Coating</h3>
+              <div className="flex flex-wrap gap-3">
+                {[
+                  { href: "/epoxy-coating/", label: "Epoxy Coating" },
+                  { href: "/epoxy-vloer-coating/", label: "Epoxy Vloer Coating" },
+                  { href: "/epoxy-coating-prijs/", label: "Epoxy Coating Prijs" },
+                  { href: "/epoxy-coating-kosten/", label: "Epoxy Coating Kosten" },
+                  { href: "/betoncoating-epoxy/", label: "Betoncoating Epoxy" },
+                  { href: "/betonvloer-coaten/", label: "Betonvloer Coaten" },
+                  { href: "/epoxy-coating-garage/", label: "Epoxy Coating Garage" },
+                  { href: "/garagevloer-epoxy-coating/", label: "Garagevloer Epoxy Coating" },
+                ].map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    className="px-4 py-2 text-xs font-bold uppercase tracking-wider border border-black/10 rounded-full hover:border-epoxy-accent hover:text-epoxy-accent transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Final CTA */}
         <section className="py-24 bg-epoxy-accent text-epoxy-black">
           <div className="max-w-7xl mx-auto px-6 text-center">
