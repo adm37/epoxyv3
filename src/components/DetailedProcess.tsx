@@ -70,7 +70,7 @@ export default function DetailedProcess() {
         <div className="mb-32">
           <div className="max-w-3xl mb-16">
             <span className="section-subtitle">Stappenplan</span>
-            <h2 className="section-title mb-8">HOE WIJ UW VLOER <br /> <span className="opacity-20">TRANSFORMEREN.</span></h2>
+            <h1 className="section-title mb-8">HOE WIJ UW VLOER <br /> <span className="opacity-20">TRANSFORMEREN.</span></h1>
             <p className="text-epoxy-black/60 text-lg">
               Een perfecte epoxyvloer valt of staat bij de voorbereiding. Wij hanteren een strikt proces om de hoogste kwaliteit en duurzaamheid te garanderen.
             </p>

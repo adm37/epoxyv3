@@ -7,7 +7,7 @@ const services = [
     slug: "epoxy-coating",
     description: "Een strakke en duurzame afwerking voor uw woonkamer of kantoor. Onze epoxy coatings zijn naadloos, hygiënisch en perfect voor vloerverwarming.",
     icon: Sparkles,
-    image: "https://i.ibb.co/7tCK67SP/19c0692b-773c-47b8-9586-aa73bb06891d.png"
+    image: "https://i.ibb.co/4fTzWJYh/22f26dd7-177e-438d-8177-3cb4378504e3.png"
   },
   {
     title: "Metallic Epoxy",
@@ -83,7 +83,7 @@ export default function Services() {
                   referrerPolicy="no-referrer"
                 />
               </div>
-              <a href={`/${service.slug}`} className="text-[10px] font-bold uppercase tracking-widest text-epoxy-black border-b border-epoxy-black/20 pb-1 hover:border-epoxy-accent transition-colors">
+              <a href={`/${service.slug}/`} className="text-[10px] font-bold uppercase tracking-widest text-epoxy-black border-b border-epoxy-black/20 pb-1 hover:border-epoxy-accent transition-colors">
                 Ontdek Meer
               </a>
             </motion.div>

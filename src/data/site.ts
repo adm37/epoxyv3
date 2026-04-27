@@ -8,7 +8,7 @@ export const DEFAULT_DESCRIPTION =
 export const DEFAULT_OG_IMAGE =
   'https://i.ibb.co/KxK89vjx/Epoxy-vloer-www-klasse-epoxy-nl.png';
 export const PHONE_DISPLAY = '0752340037';
-export const PHONE_E164 = '0752340037';
+export const PHONE_E164 = '+31752340037';
 export const EMAIL = 'info@klasseepoxy.nl';
 export const ADDRESS = {
   streetAddress: 'Heiligeweg 105B',
@@ -68,11 +68,11 @@ export const staticPages = [
     path: '/sitemap',
     title: 'Sitemap: Alle Pagina\'s van Klasse Epoxy | Klasse Epoxy',
     description:
-      'Bekijk een compleet overzicht van alle pagina\'s op klasseepoxy.nl, inclusief diensten, steden en kennispagina\'s.',
+      'Sitemap met volledige overzicht van alle pagina\'s op klasseepoxy.nl: epoxy vloerservices, steden, diensten, en informatieve kennispagina\'s. Vind snel wat u zoekt.',
   },
   {
     path: '/privacy',
-    title: 'Privacybeleid | Klasse Epoxy',
+    title: 'Privacybeleid: Hoe Klasse Epoxy Uw Gegevens Beschermt | Klasse Epoxy',
     description:
       'Lees het privacybeleid van Klasse Epoxy: hoe wij uw persoonsgegevens verzamelen, verwerken en beschermen conform de AVG/GDPR.',
   },
@@ -174,9 +174,9 @@ export function getStaticPathsList() {
 export function getAllPublicPaths() {
   return Array.from(new Set([
     ...getStaticPathsList(),
-    ...serviceSlugs.map((slug) => `/${slug}`),
-    ...keywordSlugs.map((slug) => `/${slug}`),
-    ...citySlugs.map((slug) => `/${slug}`),
+    ...serviceSlugs.map((slug) => `/${slug}/`),
+    ...keywordSlugs.map((slug) => `/${slug}/`),
+    ...citySlugs.map((slug) => `/${slug}/`),
   ]));
 }
 
@@ -189,7 +189,7 @@ export function getSlugSeo(slug: string) {
           'Klasse Epoxy levert professionele epoxy coating voor betonvloeren in woningen, garages en bedrijven. Vloeistofdicht, slijtvast en volledig op maat. Vraag een offerte aan.',
       },
       'metallic-epoxy': {
-        title: 'Metallic Epoxy Vloer: Luxe Designvloer met Diepte-Effect | Klasse Epoxy',
+        title: 'Metallic Epoxy Vloer: Luxe Designvloer | Klasse Epoxy',
         description:
           'Klasse Epoxy realiseert exclusieve metallic epoxy vloeren met een uniek diepte-effect en glanzende uitstraling. Ideaal voor woonkamers, showrooms en kantoren.',
       },
@@ -238,6 +238,46 @@ export function getSlugSeo(slug: string) {
       title: `Epoxy Vloer ${city} | Klasse Epoxy`,
       description: `Klasse Epoxy realiseert hoogwaardige epoxy vloeren in ${city}. Naadloze, duurzame en onderhoudsvriendelijke vloeren voor woningen, werkplaatsen en commerciële ruimtes.`,
       schemaType: 'Service',
+    };
+  }
+
+  // Keyword-specific metadata for short-title pages
+  const keywordMeta: Record<string, { title: string; description: string }> = {
+    'epoxy-vloer': {
+      title: 'Epoxy Vloer: Professionele Coating voor Duurzaamheid | Klasse Epoxy',
+      description: 'Epoxy vloer van Klasse Epoxy: naadloze, sterke en duurzame coating voor woningen, garages en bedrijven. Gratis inspectie en offerte. Bel nu!',
+    },
+    'oprit-epoxy': {
+      title: 'Oprit Epoxy: UV-Bestendige Coating voor Uw Oprit | Klasse Epoxy',
+      description: 'Oprit epoxy coating van Klasse Epoxy: sterke, glanzende en slijtvaste afwerking die tegen alles bestand is. Transformeer uw oprit professioneel.',
+    },
+    'flakesvloer': {
+      title: 'Flakesvloer: Decoratieve & Antislip Epoxy Vloer | Klasse Epoxy',
+      description: 'Flakesvloer van Klasse Epoxy: kleurvlokken op epoxy met antislip werking. Ideaal voor garages, showrooms en werkplaatsen. Vraag nu een offerte aan.',
+    },
+    'flakes-vloer': {
+      title: 'Flakes Vloer: Decoratief Epoxy Systeem met Kleurvlokken | Klasse Epoxy',
+      description: 'Flakes vloer van Klasse Epoxy: decoratieve epoxy met kleurvlokken (chips). Antislip, slijtvast en onderhoudsvrij. Kostbaar advies en offerte gratis.',
+    },
+    'chipsvloer': {
+      title: 'Chipsvloer: Slijtvaste Epoxy met Decoratieve Chips | Klasse Epoxy',
+      description: 'Chipsvloer van Klasse Epoxy: sterke epoxy coating met kleurvlokken. Antislip vloer voor garages en bedrijven. Snelle installatie, langdurige bescherming.',
+    },
+    'vlokkenvloer': {
+      title: 'Vlokkenvloer: Epoxy Vloer met Kleurvlokken Design | Klasse Epoxy',
+      description: 'Vlokkenvloer van Klasse Epoxy: unieke epoxy coating met kleurvlokken (vinyl flakes). Perfect voor moderne interieurs en commerciële ruimtes.',
+    },
+    'epoxy-vlokken': {
+      title: 'Epoxy Vlokken: Kleurvlokken in Epoxy Coating | Klasse Epoxy',
+      description: 'Epoxy vlokken van Klasse Epoxy: decoratieve kleurvlokken in epoxy voor een uniek vloereffect. Duurzaam, antislip en onderhoudsvrij. Offerte gratis.',
+    },
+  };
+
+  if (keywordMeta[slug]) {
+    return {
+      title: keywordMeta[slug].title,
+      description: keywordMeta[slug].description,
+      schemaType: 'WebPage',
     };
   }
 
@@ -326,8 +366,9 @@ export function getOrganizationSchema() {
 export function getLocalBusinessSchema() {
   return {
     '@context': 'https://schema.org',
-    '@type': 'HomeAndConstructionBusiness',
+    '@type': 'LocalBusiness',
     '@id': `${SITE_URL}#localbusiness`,
+    additionalType: 'https://schema.org/HomeAndConstructionBusiness',
     name: SITE_NAME,
     image: DEFAULT_OG_IMAGE,
     url: SITE_URL,
@@ -423,6 +464,10 @@ export function getWebPageSchema(pathname: string, title: string, description: s
 }
 
 export function getPageSchemas(pathname: string, title: string, description: string, schemaType?: string) {
+  const normalizedPathname = pathname.endsWith('/') && pathname !== '/'
+    ? pathname.slice(0, -1)
+    : pathname;
+
   const schemas = [
     getWebsiteSchema(),
     getOrganizationSchema(),
@@ -430,30 +475,30 @@ export function getPageSchemas(pathname: string, title: string, description: str
     getBreadcrumbSchema(pathname, title),
   ];
 
-  if (pathname === '/' || schemaType === 'WebSite') {
+  if (normalizedPathname === '/' || schemaType === 'WebSite') {
     schemas.push(getWebPageSchema(pathname, title, description, 'WebPage'));
     schemas.push(getFaqSchema());
     return schemas;
   }
 
-  if (pathname === '/faq') {
+  if (normalizedPathname === '/faq') {
     schemas.push(getWebPageSchema(pathname, title, description, 'FAQPage'));
     schemas.push(getFaqSchema());
     return schemas;
   }
 
-  if (pathname === '/contact') {
+  if (normalizedPathname === '/contact') {
     schemas.push(getWebPageSchema(pathname, title, description, 'ContactPage'));
     return schemas;
   }
 
   if (schemaType === 'Service') {
-    schemas.push(getWebPageSchema(pathname, title, description, 'Service')); 
+    schemas.push(getWebPageSchema(pathname, title, description, 'WebPage'));
     schemas.push(getServiceSchema(pathname, title, description));
     return schemas;
   }
 
-  if (pathname === '/diensten') {
+  if (normalizedPathname === '/diensten') {
     schemas.push(getWebPageSchema(pathname, title, description, 'CollectionPage'));
     return schemas;
   }
@@ -471,7 +516,7 @@ export function getLlmsEntries() {
 
   const servicePages = serviceSlugs.map((slug) => ({
     title: getSlugSeo(slug).title,
-    path: `/${slug}`,
+    path: `/${slug}/`,
     description: getSlugSeo(slug).description,
   }));
 

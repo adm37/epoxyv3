@@ -149,7 +149,7 @@ export default function ServicePage({ slug = "epoxy-coating" }: Props) {
                 {cities.map(city => (
                   <a
                     key={city}
-                    href={`/${slug}-vloer-${city.toLowerCase().replace(/\s+/g, '-').replace(/'/g, '')}`}
+                      href={`/${slug}-vloer-${city.toLowerCase().replace(/\s+/g, '-').replace(/'/g, '')}/`}
                     className="bg-white p-4 rounded-xl border border-black/5 font-bold text-[10px] uppercase tracking-widest hover:border-epoxy-accent hover:text-epoxy-accent transition-all shadow-sm"
                   >
                     {data.title} {city}

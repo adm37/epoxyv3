@@ -69,7 +69,7 @@ export default function ServicesPage() {
                   key={service.title}
                   className="group"
                 >
-                  <a href={`/${service.slug}`} className="block h-full border-b border-black/10 pb-12 hover:border-epoxy-accent transition-colors">
+                  <a href={`/${service.slug}/`} className="block h-full border-b border-black/10 pb-12 hover:border-epoxy-accent transition-colors">
                     <div className="relative aspect-[16/10] overflow-hidden rounded-3xl mb-8">
                       <img 
                         src={service.image} 
