@@ -21,6 +21,9 @@ Allow: /
 User-agent: PerplexityBot
 Allow: /
 
+User-agent: AhrefsBot
+Allow: /
+
 User-agent: Google-Extended
 Allow: /
 
