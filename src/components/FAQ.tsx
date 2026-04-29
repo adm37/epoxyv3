@@ -7,7 +7,7 @@ export default function FAQ() {
       <div className="max-w-4xl mx-auto px-6">
         <div className="mb-24 text-center">
           <span className="section-subtitle">FAQ</span>
-          <h1 className="section-title">VEELGESTELDE <br /> <span className="opacity-20">VRAGEN.</span></h1>
+          <h2 className="section-title">VEELGESTELDE <br /> <span className="opacity-20">VRAGEN.</span></h2>
         </div>
 
         <div className="space-y-4">

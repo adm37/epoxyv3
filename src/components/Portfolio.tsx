@@ -14,7 +14,7 @@ export default function Portfolio() {
         <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
           <div>
             <span className="section-subtitle">Portfolio</span>
-            <h1 className="section-title">NAADLOZE <br/> PROJECTEN.</h1>
+            <h2 className="section-title">NAADLOZE <br/> PROJECTEN.</h2>
           </div>
           <p className="text-epoxy-black/30 text-sm max-w-xs uppercase tracking-widest font-bold leading-relaxed">
             Bekijk onze gerealiseerde <strong>epoxy vloer design</strong> projecten en laat u inspireren door onze <strong>gietvloeren</strong>.
