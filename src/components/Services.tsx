@@ -7,14 +7,14 @@ const services = [
     slug: "epoxy-coating",
     description: "Een strakke en duurzame afwerking voor uw woonkamer of kantoor. Onze epoxy coatings zijn naadloos, hygiënisch en perfect voor vloerverwarming.",
     icon: Sparkles,
-    image: "https://i.ibb.co/4fTzWJYh/22f26dd7-177e-438d-8177-3cb4378504e3.png"
+    image: "/epoxy coating - klasse epoxy.png"
   },
   {
     title: "Metallic Epoxy",
     slug: "metallic-epoxy",
     description: "Exclusieve designvloeren met unieke diepte-effecten die doen denken aan marmer of vloeibaar metaal. De perfecte balans tussen kunst en functionaliteit.",
     icon: Zap,
-    image: "https://i.ibb.co/5hXQHXQF/65a662fe-2c67-43a2-b2fc-10886c1211f8.png",
+    image: "/metallic epoxy - klasse epoxy.png",
     popular: true
   },
   {
@@ -22,7 +22,7 @@ const services = [
     slug: "flake-epoxy",
     description: "Decoratieve en extreem slijtvaste vloeren ingestrooid met kleurvlokken. Ideaal voor zowel design interieurs als intensief gebruikte ruimtes.",
     icon: Shield,
-    image: "https://i.ibb.co/4wXWTCnJ/ccda1e1d-cdc0-482e-91ca-ddac2648669e.png"
+    image: "/flake epoxy - klasse epoxy.png"
   }
 ];
 
